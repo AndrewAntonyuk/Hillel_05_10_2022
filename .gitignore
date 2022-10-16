@@ -1,0 +1,5 @@
+#This files and folders are ignored
+.idea
+.git
+out
+*.iml
