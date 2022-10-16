@@ -22,12 +22,10 @@ public class Cat extends Animal{
     public void run(Integer distance) {
         if(maximumRunning <= 0){
             System.out.println(super.getName() + " can't running");
-        }
-        else if(distance <= maximumRunning){
+        }else if(distance <= maximumRunning){
             System.out.println(super.getName() + " with name " + instanceName
                     + " ran " + distance + " m.");
-        }
-        else{
+        }else{
             System.out.println(super.getName() + " with name " + instanceName
                     + " ran " + maximumRunning + " m. from "
                     + distance + " Cause it is maximum");
@@ -38,12 +36,10 @@ public class Cat extends Animal{
     public void swim(Integer distance) {
         if(maximumSwimming <= 0){
             System.out.println(super.getName() + " can't swimming");
-        }
-        else if(distance <= maximumSwimming){
+        }else if(distance <= maximumSwimming){
             System.out.println(super.getName() + " with name " + instanceName
                     + " swum " + distance + " m.");
-        }
-        else{
+        }else{
             System.out.println(super.getName() + " with name " + instanceName
                     + " swum " + maximumRunning + " m. from "
                     + distance + " Cause it is maximum");
