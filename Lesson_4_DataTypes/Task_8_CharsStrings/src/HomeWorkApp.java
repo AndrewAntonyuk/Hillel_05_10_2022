@@ -12,14 +12,13 @@ public class HomeWorkApp {
         Plant plant = new Plant();
 
         System.out.println("Subtask 2:");
-        System.out.println("Character \'" + valSearch2 + "\' repeats in the string \""
-                + source2 + "\" " + hw.findSymbolOccurance(source2,valSearch2)
-                + " times \n");
+        System.out.println("Character '" + valSearch2 + "' repeats in the string \"" + source2 + "\" "
+                + hw.findSymbolOccurance(source2, valSearch2) + " times \n");
 
         System.out.println("Subtask 3:");
         System.out.println("Source: " + source3);
         System.out.println("Target: " + target3);
-        System.out.println("Result: " + hw.findWordPosition(source3,target3) + "\n");
+        System.out.println("Result: " + hw.findWordPosition(source3, target3) + "\n");
 
         System.out.println("Subtask 4:");
         System.out.println(source4 + " -> " + hw.stringReverse(source4) + "\n");
@@ -31,12 +30,12 @@ public class HomeWorkApp {
         plant.actionsForGame();
     }
 
-    public int findSymbolOccurance(String source, char valSearch){
+    public int findSymbolOccurance(String source, char valSearch) {
         int sum = 0;
         char[] arr = source.toCharArray();
 
-        for(char tmpChar : arr){
-            if(tmpChar == valSearch){
+        for (char tmpChar : arr) {
+            if (tmpChar == valSearch) {
                 sum++;
             }
         }
@@ -44,37 +43,25 @@ public class HomeWorkApp {
         return sum;
     }
 
-    public int findWordPosition(String source, String target){
-        int ret;
-
-        ret = source.indexOf(target);
-
-        return ret;
+    public int findWordPosition(String source, String target) {
+        return source.indexOf(target);
     }
 
-    public String stringReverse(String str){
+    public String stringReverse(String str) {
         char[] srcArr = str.toCharArray();
         char[] trgArr = str.toCharArray();
         int max = str.length() - 1;
-        String ret = "";
 
-        for(int i = max; i >= 0; i--){
+        for (int i = max; i >= 0; i--) {
             trgArr[max - i] = srcArr[i];
         }
-        ret = new String(trgArr);
 
-        return ret;
+        return new String(trgArr);
     }
 
-    public boolean isPalindrome(String str){
-        boolean ret = false;
+    public boolean isPalindrome(String str) {
         String stringReversed = stringReverse(str);
 
-        if(str.equals(stringReversed)){
-            ret = true;
-        }
-
-        return ret;
+        return (str.equals(stringReversed));
     }
 }
-
