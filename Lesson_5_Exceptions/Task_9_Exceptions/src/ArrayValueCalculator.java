@@ -37,7 +37,7 @@ public class ArrayValueCalculator {
     private boolean isIllegalSize(String[][] s) {
         if (s.length != size) return true;
 
-        for (String[] array : s){
+        for (String[] array : s) {
             if (array.length != size) return true;
         }
 
