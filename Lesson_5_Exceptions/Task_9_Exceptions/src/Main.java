@@ -56,5 +56,23 @@ public class Main {
             System.out.println("Code from finally!");
         }
         //endregion
+
+        //region Other illegal function
+        try {
+            divideByZero();
+            result = arrayValueCalculator.doCalc(illegalDataArray);
+            System.out.println("Sum is: " + result);
+        } catch (ArrayDataException | ArraySizeException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            System.out.println("Code from finally!");
+        }
+        //endregion
+    }
+
+    public static void divideByZero() {
+        int x = 100 / 0;
     }
 }
