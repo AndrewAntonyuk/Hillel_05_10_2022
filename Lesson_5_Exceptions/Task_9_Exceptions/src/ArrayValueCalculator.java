@@ -17,8 +17,8 @@ public class ArrayValueCalculator {
         int i = 0;
         int j = 0;
 
-        if (inputArray.length != size | inputArray[0].length != size) {
-            throw new ArraySizeException("Array has illegal size: " + inputArray.length + "x" + inputArray[0].length);
+        if (isIllegalSize(inputArray)) {
+            throw new ArraySizeException("Array has illegal size! Legal size: " + size + "x" + size);
         }
 
         try {
@@ -36,5 +36,21 @@ public class ArrayValueCalculator {
         }
 
         return sum;
+    }
+
+    private boolean isIllegalSize(String[][] s) {
+        boolean returnValue = false;
+
+        if (s.length != size) {
+            returnValue = true;
+        }
+
+        for (int i = 0; i < size; i++) {
+            if (s[i].length != size) {
+                returnValue = true;
+            }
+        }
+
+        return returnValue;
     }
 }
