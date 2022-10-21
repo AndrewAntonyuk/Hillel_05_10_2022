@@ -29,28 +29,18 @@ public class ArrayValueCalculator {
             }
         } catch (NumberFormatException e) {
             throw new ArrayDataException("Illegal digit at the position [" + i + "][" + j + "]", e);
-        } finally {
-            if (i < size - 1 | j < size - 1) {
-                sum = 0;
-            }
         }
 
         return sum;
     }
 
     private boolean isIllegalSize(String[][] s) {
-        boolean returnValue = false;
+        if (s.length != size) return true;
 
-        if (s.length != size) {
-            returnValue = true;
+        for (String[] array : s){
+            if (array.length != size) return true;
         }
 
-        for (int i = 0; i < size; i++) {
-            if (s[i].length != size) {
-                returnValue = true;
-            }
-        }
-
-        return returnValue;
+        return false;
     }
 }

@@ -26,8 +26,6 @@ public class Main {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            System.out.println("Code from finally!");
         }
         //endregion
 
@@ -39,8 +37,6 @@ public class Main {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            System.out.println("Code from finally!");
         }
         //endregion
 
@@ -52,8 +48,6 @@ public class Main {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            System.out.println("Code from finally!");
         }
         //endregion
 
@@ -66,8 +60,6 @@ public class Main {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            System.out.println("Code from finally!");
         }
         //endregion
     }
