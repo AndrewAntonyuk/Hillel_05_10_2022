@@ -1,6 +1,6 @@
 package hw_10_Tests;
 
-import hw_10_LoggerExceptions.FileMaxSizeReachedException;
+import hw_10_LoggerToFile.FileMaxSizeReachedException;
 import hw_10_LoggerToFile.FileLogger;
 import hw_10_LoggerToFile.FileLoggerConfiguration;
 import hw_10_LoggerToFile.LoggingLevel;

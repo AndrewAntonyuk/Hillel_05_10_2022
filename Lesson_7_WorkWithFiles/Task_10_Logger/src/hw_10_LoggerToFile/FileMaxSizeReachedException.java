@@ -1,4 +1,4 @@
-package hw_10_LoggerExceptions;
+package hw_10_LoggerToFile;
 
 public class FileMaxSizeReachedException extends Exception{
     public FileMaxSizeReachedException() {

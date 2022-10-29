@@ -1,7 +1,5 @@
 package hw_10_LoggerToFile;
 
-import hw_10_LoggerExceptions.FileMaxSizeReachedException;
-
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
