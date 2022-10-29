@@ -1,4 +1,4 @@
-package hw_10_LoggerToFile;
+package hw_10_LoggerParrents;
 
 public enum LoggingLevel {
     DEBUG, INFO

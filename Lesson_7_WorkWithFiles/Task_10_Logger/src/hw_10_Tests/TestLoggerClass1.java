@@ -1,19 +1,14 @@
 package hw_10_Tests;
 
-import hw_10_LoggerToFile.FileMaxSizeReachedException;
-import hw_10_LoggerToFile.FileLogger;
-import hw_10_LoggerToFile.FileLoggerConfiguration;
-import hw_10_LoggerToFile.LoggingLevel;
+import hw_10_LoggerParrents.*;
 
 public class TestLoggerClass1 {
-    FileLogger logger;
+    BaseLogger logger;
 
     public TestLoggerClass1() {
-        logger = new FileLogger(new FileLoggerConfiguration("Logs.txt", LoggingLevel.DEBUG, 400)
-                , TestLoggerClass1.class.getName());
     }
 
-    public TestLoggerClass1(FileLogger logger) {
+    public TestLoggerClass1(BaseLogger logger) {
         this.logger = logger;
         logger.setInstanceName(TestLoggerClass1.class.getName());
     }
@@ -22,12 +17,12 @@ public class TestLoggerClass1 {
         int sum = 0;
         try {
             logger.info("Start function testFoo");
-            for (int i = 0; i < 7; i++) {
+            for (int i = 0; i < 20; i++) {
                 sum += i * 5;
                 logger.debug("Current add in testFoo is: " + (i * 5));
             }
             logger.info("Finally sum in testFoo is: " + sum);
-        } catch (FileMaxSizeReachedException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
