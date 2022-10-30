@@ -18,16 +18,16 @@ public class FileLoggerConfigurationLoader extends LoggerConfigurationLoader {
 
             properties.load(input);
 
-            loggerConfiguration.setCurrentLoggingLevel(LoggingLevel.valueOf(properties.getProperty("LEVEL")));
-            loggerConfiguration.setFileName(properties.getProperty("FILE"));
+            if (LoggingLevel.isValidEnum(properties.getProperty("LEVEL"))) {
+                loggerConfiguration.setCurrentLoggingLevel(LoggingLevel.valueOf(properties.getProperty("LEVEL")));
+            }
+            loggerConfiguration.setFullFileName(properties.getProperty("FILE"));
             loggerConfiguration.setFormat(properties.getProperty("FORMAT"));
             loggerConfiguration.setMaxSizeOfFile(Long.parseLong(properties.getProperty("MAX-SIZE")));
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+
+            return loggerConfiguration;
         } catch (IOException e) {
             throw new RuntimeException(e);
-        } finally {
-            return loggerConfiguration;
         }
     }
 }

@@ -1,4 +1,0 @@
-[29.10.2022-22:28:00.134] [INFO ] Message: In the class [hw_10_Tests.TestLoggerClass1] Start function testFoo 
-[29.10.2022-22:28:00.150] [INFO ] Message: In the class [hw_10_Tests.TestLoggerClass1] Finally sum in testFoo is: 950 
-[30.10.2022-11:46:01.519] [INFO ] Message: In the class [TestLoggerFromObject] Some info text 
-[30.10.2022-11:48:17.775] [INFO ] Message: In the class [TestLoggerFromObject] Some info text 

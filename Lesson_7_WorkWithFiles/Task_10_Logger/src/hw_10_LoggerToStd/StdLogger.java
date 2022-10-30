@@ -34,7 +34,7 @@ public class StdLogger extends Logger {
             String formattedMessage = String.format(super.getLoggerConfiguration().getFormat(), LocalDateTime.now(),
                     LoggingLevel.DEBUG, message, super.getInstanceName());
 
-            putLogToFile(formattedMessage);
+            putLogToStd(formattedMessage);
         }
     }
 
@@ -43,11 +43,11 @@ public class StdLogger extends Logger {
             String formattedMessage = String.format(super.getLoggerConfiguration().getFormat(), LocalDateTime.now(),
                     LoggingLevel.INFO, message, super.getInstanceName());
 
-            putLogToFile(formattedMessage);
+            putLogToStd(formattedMessage);
         }
     }
 
-    private void putLogToFile(String logMessage) {
+    private void putLogToStd(String logMessage) {
         System.out.print(logMessage);
     }
 }

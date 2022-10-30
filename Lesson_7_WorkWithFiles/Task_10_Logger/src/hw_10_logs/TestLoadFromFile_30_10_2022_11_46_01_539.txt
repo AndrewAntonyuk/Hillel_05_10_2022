@@ -1,8 +1,0 @@
-[30.10.2022-11:46:01.538] [DEBUG] Message: In the class [TestLoggerFromPropFile] Some debug text 
-[30.10.2022-11:46:01.540] [DEBUG] Message: In the class [TestLoggerFromPropFile] Some debug text1 
-[30.10.2022-11:46:01.541] [DEBUG] Message: In the class [TestLoggerFromPropFile] Some debug text2 
-[30.10.2022-11:46:01.542] [INFO ] Message: In the class [TestLoggerFromPropFile] Some info text 
-[30.10.2022-11:48:17.786] [DEBUG] Message: In the class [TestLoggerFromPropFile] Some debug text 
-[30.10.2022-11:48:17.787] [DEBUG] Message: In the class [TestLoggerFromPropFile] Some debug text1 
-[30.10.2022-11:48:17.787] [DEBUG] Message: In the class [TestLoggerFromPropFile] Some debug text2 
-[30.10.2022-11:48:17.789] [INFO ] Message: In the class [TestLoggerFromPropFile] Some info text 

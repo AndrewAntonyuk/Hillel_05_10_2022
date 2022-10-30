@@ -5,7 +5,7 @@ import hw_10_LoggerToStd.*;
 public class Main {
     public static void main(String[] args) {
         FileLoggerConfigurationLoader configurationLoader = new FileLoggerConfigurationLoader();
-        FileLoggerConfiguration loggerConfiguration = new FileLoggerConfiguration("TestLogs",
+        FileLoggerConfiguration loggerConfiguration = new FileLoggerConfiguration("src/hw_10_logs/TestLogs.txt",
                 LoggingLevel.INFO, 500);
         FileLogger logger = new FileLogger(loggerConfiguration, "TestLoggerFromObject");
 

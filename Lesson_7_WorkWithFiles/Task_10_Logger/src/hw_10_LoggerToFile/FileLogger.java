@@ -7,26 +7,28 @@ import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 
 public class FileLogger extends Logger {
+    private String lastFullLogFileName = "";
+
     //region Constructors
     public FileLogger() {
         super();
-        super.setLoggerConfiguration(new FileLoggerConfiguration());
+        setLoggerConfiguration(new FileLoggerConfiguration());
     }
 
     public FileLogger(FileLoggerConfiguration loggerConfiguration) {
         super();
-        super.setLoggerConfiguration(loggerConfiguration);
+        setLoggerConfiguration(loggerConfiguration);
     }
 
     public FileLogger(String instanceName) {
         this();
-        super.setInstanceName(instanceName);
+        this.setInstanceName(instanceName);
     }
 
     public FileLogger(FileLoggerConfiguration loggerConfiguration, String instanceName) {
         super();
-        super.setLoggerConfiguration(loggerConfiguration);
-        super.setInstanceName(instanceName);
+        setLoggerConfiguration(loggerConfiguration);
+        this.setInstanceName(instanceName);
     }
     //endregion
 
@@ -55,7 +57,7 @@ public class FileLogger extends Logger {
         File file;
 
         try {
-            file = getLogFile(super.getLoggerConfiguration().getFilePath());
+            file = getLogFile();
             fileOutputStream = new FileOutputStream(file, true);
             outputStreamWriter = new OutputStreamWriter(fileOutputStream, StandardCharsets.UTF_8);
             writer = new BufferedWriter(outputStreamWriter);
@@ -90,49 +92,24 @@ public class FileLogger extends Logger {
         }
     }
 
-    private File getLogFile(String directory) {
-        File currentLogFile = getLastLogFile(directory);
-        String newFileName = String.format("%2$s_%1$td_%1$tm_%1$tY_%1$tH_%1$tM_%1$tS_%1$tL.txt", LocalDateTime.now(),
-                super.getLoggerConfiguration().getFileName());
+    private File getLogFile() {
+        FileLoggerConfiguration loggerConfiguration = (FileLoggerConfiguration) this.getLoggerConfiguration();
+        File currentLogFile;
 
-        if (currentLogFile == null) {
-            currentLogFile = createFile(super.getLoggerConfiguration().getFilePath() + newFileName);
+        String newFileName = String.format("%4$s/%2$s_%1$td_%1$tm_%1$tY_%1$tH_%1$tM_%1$tS_%1$tL.%3$s", LocalDateTime.now(),
+                loggerConfiguration.getFileName(), loggerConfiguration.getFileExtension(), loggerConfiguration.getDirectoryPath());
+
+        if (lastFullLogFileName.isEmpty() || !lastFullLogFileName.contains(loggerConfiguration.getDirectoryPath()
+                + "/" + loggerConfiguration.getFileName() + "_")) {
+            currentLogFile = createFile(newFileName);
         } else {
-            if (currentLogFile.length() >= super.getLoggerConfiguration().getMaxSizeOfFile()) {
-                currentLogFile = createFile(super.getLoggerConfiguration().getFilePath() + newFileName);
+            currentLogFile = new File(lastFullLogFileName);
+            if (currentLogFile.length() >= loggerConfiguration.getMaxSizeOfFile()) {
+                currentLogFile = createFile(newFileName);
             }
         }
 
         return currentLogFile;
-    }
-
-    private File getLastLogFile(String directory) {
-        if (directory == null) {
-            return null;
-        }
-
-        File folder = new File(directory);
-        File[] listOfFiles;
-        String fileName = super.getLoggerConfiguration().getFileName();
-
-        folder.
-
-        if (folder.exists()) {
-            listOfFiles = folder.listFiles(new FilenameFilter() {
-                @Override
-                public boolean accept(File dir, String name) {
-                    return name.contains(fileName);
-                }
-            });
-
-            if (listOfFiles.length == 0) {
-                return null;
-            }
-
-            return listOfFiles[listOfFiles.length - 1];
-        } else {
-            return null;
-        }
     }
 
     private File createFile(String fullPathFile) {
@@ -143,7 +120,45 @@ public class FileLogger extends Logger {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        lastFullLogFileName = fullPathFile;
 
         return file;
     }
+
+    private String getLastFullLogFileName() {
+        String directoryPath = ((FileLoggerConfiguration) this.getLoggerConfiguration()).getDirectoryPath();
+        String fileName = ((FileLoggerConfiguration) this.getLoggerConfiguration()).getFileName();
+
+        if (directoryPath.isEmpty()) {
+            return "";
+        }
+
+        File folder = new File(directoryPath);
+        File[] listOfFiles;
+
+        if (folder.exists()) {
+            listOfFiles = folder.listFiles(new FilenameFilter() {
+                @Override
+                public boolean accept(File directory, String name) {
+                    return name.contains(fileName);
+                }
+            });
+
+            if (listOfFiles.length == 0) {
+                return "";
+            }
+
+            return directoryPath + "/" + listOfFiles[listOfFiles.length - 1].getName();
+        } else {
+            return "";
+        }
+    }
+
+    //region Setters/Getters
+    @Override
+    public void setLoggerConfiguration(LoggerConfiguration loggerConfiguration) {
+        super.setLoggerConfiguration(loggerConfiguration);
+        lastFullLogFileName = getLastFullLogFileName();
+    }
+    //endregion
 }

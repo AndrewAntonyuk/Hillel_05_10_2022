@@ -20,14 +20,14 @@ public class StdLoggerConfigurationLoader extends LoggerConfigurationLoader {
 
             properties.load(input);
 
-            loggerConfiguration.setCurrentLoggingLevel(LoggingLevel.valueOf(properties.getProperty("LEVEL")));
+            if (LoggingLevel.isValidEnum(properties.getProperty("LEVEL"))) {
+                loggerConfiguration.setCurrentLoggingLevel(LoggingLevel.valueOf(properties.getProperty("LEVEL")));
+            }
             loggerConfiguration.setFormat(properties.getProperty("FORMAT"));
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+
+            return loggerConfiguration;
         } catch (IOException e) {
             throw new RuntimeException(e);
-        } finally {
-            return loggerConfiguration;
         }
     }
 }
