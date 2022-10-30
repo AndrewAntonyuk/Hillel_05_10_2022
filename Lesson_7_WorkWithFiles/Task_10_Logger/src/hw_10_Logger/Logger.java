@@ -1,7 +1,7 @@
-package hw_10_LoggerParrents;
+package hw_10_Logger;
 
-public abstract class BaseLogger {
-    private BaseLoggerConfiguration loggerConfiguration;
+public abstract class Logger {
+    private LoggerConfiguration loggerConfiguration;
     private String instanceName = "Without name data";
 
     public abstract void debug(String message);
@@ -9,11 +9,11 @@ public abstract class BaseLogger {
     public abstract void info(String message);
 
     //region Getters/Setters
-    public BaseLoggerConfiguration getLoggerConfiguration() {
+    public LoggerConfiguration getLoggerConfiguration() {
         return loggerConfiguration;
     }
 
-    public void setLoggerConfiguration(BaseLoggerConfiguration loggerConfiguration) {
+    public void setLoggerConfiguration(LoggerConfiguration loggerConfiguration) {
         this.loggerConfiguration = loggerConfiguration;
     }
 

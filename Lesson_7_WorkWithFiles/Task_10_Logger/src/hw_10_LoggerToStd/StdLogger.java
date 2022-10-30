@@ -1,13 +1,11 @@
 package hw_10_LoggerToStd;
 
-import hw_10_LoggerParrents.BaseLogger;
-import hw_10_LoggerParrents.LoggingLevel;
+import hw_10_Logger.Logger;
+import hw_10_Logger.LoggingLevel;
 
-import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 
-public class StdLogger extends BaseLogger {
+public class StdLogger extends Logger {
     //region Constructors
     public StdLogger() {
         super();

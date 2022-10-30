@@ -1,6 +1,6 @@
 package hw_10_LoggerToFile;
 
-import hw_10_LoggerParrents.*;
+import hw_10_Logger.*;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,9 +8,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class FileLoggerConfigurationLoader extends BaseLoggerConfigurationLoader {
+public class FileLoggerConfigurationLoader extends LoggerConfigurationLoader {
     @Override
-    public BaseLoggerConfiguration load(String fullPathToConfigFile) {
+    public LoggerConfiguration load(String fullPathToConfigFile) {
         FileLoggerConfiguration loggerConfiguration = new FileLoggerConfiguration();
 
         try (InputStream input = new FileInputStream(fullPathToConfigFile)) {

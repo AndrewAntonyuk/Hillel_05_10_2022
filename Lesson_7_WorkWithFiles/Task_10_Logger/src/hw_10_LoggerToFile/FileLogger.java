@@ -1,12 +1,12 @@
 package hw_10_LoggerToFile;
 
-import hw_10_LoggerParrents.*;
+import hw_10_Logger.*;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 
-public class FileLogger extends BaseLogger {
+public class FileLogger extends Logger {
     //region Constructors
     public FileLogger() {
         super();
@@ -31,7 +31,7 @@ public class FileLogger extends BaseLogger {
     //endregion
 
     public void debug(String message) {
-        if (super.getLoggerConfiguration().getCurrentLoggingLevel().compareTo(LoggingLevel.DEBUG) == 0) {
+        if (super.getLoggerConfiguration().getCurrentLoggingLevel().equals(LoggingLevel.DEBUG)) {
             String formattedMessage = String.format(super.getLoggerConfiguration().getFormat(), LocalDateTime.now(),
                     LoggingLevel.DEBUG, message, super.getInstanceName());
 
@@ -114,6 +114,8 @@ public class FileLogger extends BaseLogger {
         File folder = new File(directory);
         File[] listOfFiles;
         String fileName = super.getLoggerConfiguration().getFileName();
+
+        folder.
 
         if (folder.exists()) {
             listOfFiles = folder.listFiles(new FilenameFilter() {

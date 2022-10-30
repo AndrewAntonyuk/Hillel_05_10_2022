@@ -1,6 +1,6 @@
-package hw_10_LoggerParrents;
+package hw_10_Logger;
 
-public abstract class BaseLoggerConfiguration {
+public abstract class LoggerConfiguration {
     private String fileName = "DefaultLog";
     private String filePath = "src/hw_10_logs/";
     private LoggingLevel currentLoggingLevel = LoggingLevel.INFO;
@@ -8,19 +8,19 @@ public abstract class BaseLoggerConfiguration {
     private String format = "[%1$td.%1$tm.%1$tY-%1$tH:%1$tM:%1$tS.%1$tL] [%2$-5s] Message: In the class [%4$s] %3$s %n";
 
     //region Constructors
-    public BaseLoggerConfiguration() {
+    public LoggerConfiguration() {
     }
 
-    public BaseLoggerConfiguration(String fileName) {
+    public LoggerConfiguration(String fileName) {
         this.fileName = fileName;
     }
 
-    public BaseLoggerConfiguration(String fileName, long maxSizeOfFile) {
+    public LoggerConfiguration(String fileName, long maxSizeOfFile) {
         this(fileName);
         this.maxSizeOfFile = maxSizeOfFile;
     }
 
-    public BaseLoggerConfiguration(String fileName, LoggingLevel currentLoggingLevel, long maxSizeOfFile) {
+    public LoggerConfiguration(String fileName, LoggingLevel currentLoggingLevel, long maxSizeOfFile) {
         this(fileName, maxSizeOfFile);
         this.currentLoggingLevel = currentLoggingLevel;
     }

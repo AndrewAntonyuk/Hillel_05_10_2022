@@ -1,8 +1,8 @@
 package hw_10_LoggerToFile;
 
-import hw_10_LoggerParrents.*;
+import hw_10_Logger.*;
 
-public class FileLoggerConfiguration extends BaseLoggerConfiguration {
+public class FileLoggerConfiguration extends LoggerConfiguration {
     //region Constructors
     public FileLoggerConfiguration() {
         super();

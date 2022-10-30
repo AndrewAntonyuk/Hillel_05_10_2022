@@ -1,33 +1,43 @@
-import hw_10_LoggerParrents.*;
+import hw_10_Logger.*;
 import hw_10_LoggerToFile.*;
-import hw_10_LoggerToStd.StdLogger;
-import hw_10_LoggerToStd.StdLoggerConfiguration;
-import hw_10_LoggerToStd.StdLoggerConfigurationLoader;
-import hw_10_Tests.*;
+import hw_10_LoggerToStd.*;
 
 public class Main {
     public static void main(String[] args) {
         FileLoggerConfigurationLoader configurationLoader = new FileLoggerConfigurationLoader();
         FileLoggerConfiguration loggerConfiguration = new FileLoggerConfiguration("TestLogs",
                 LoggingLevel.INFO, 500);
-        FileLogger logger = new FileLogger(loggerConfiguration);
-        TestLoggerClass1 loggerClass1 = new TestLoggerClass1(logger);
+        FileLogger logger = new FileLogger(loggerConfiguration, "TestLoggerFromObject");
 
-        loggerClass1.testFoo();
+        logger.debug("Some debug text");
+        logger.debug("Some debug text1");
+        logger.debug("Some debug text2");
+        logger.info("Some info text");
 
         loggerConfiguration = (FileLoggerConfiguration) configurationLoader.load("src/hw_10_Configs/FilLoggerConfig.properties");
         logger.setLoggerConfiguration(loggerConfiguration);
-        TestLoggerClass2 loggerClass2 = new TestLoggerClass2(logger);
-        loggerClass2.testFoo();
+        logger.setInstanceName("TestLoggerFromPropFile");
+
+        logger.debug("Some debug text");
+        logger.debug("Some debug text1");
+        logger.debug("Some debug text2");
+        logger.info("Some info text");
 
         StdLoggerConfigurationLoader stdLoggerConfigurationLoader = new StdLoggerConfigurationLoader();
         StdLoggerConfiguration stdLoggerConfiguration = (StdLoggerConfiguration) stdLoggerConfigurationLoader.load("src/hw_10_Configs/StdLoggerConfig.properties");
         StdLogger stdLogger = new StdLogger(stdLoggerConfiguration);
+        stdLogger.setInstanceName("TestLoggerStdFromPropFile");
 
-        loggerClass1 = new TestLoggerClass1(stdLogger);
-        loggerClass1.testFoo();
+        stdLogger.debug("Some debug text to std");
+        stdLogger.debug("Some debug text to std");
+        stdLogger.info("Some info text to std");
+        stdLogger.debug("Some debug text to std");
 
-        loggerClass2 = new TestLoggerClass2(stdLogger);
-        loggerClass2.testFoo();
+        stdLoggerConfiguration.setCurrentLoggingLevel(LoggingLevel.DEBUG);
+
+        stdLogger.debug("Some debug text to std");
+        stdLogger.debug("Some debug text to std");
+        stdLogger.info("Some info text to std");
+        stdLogger.debug("Some debug text to std");
     }
 }

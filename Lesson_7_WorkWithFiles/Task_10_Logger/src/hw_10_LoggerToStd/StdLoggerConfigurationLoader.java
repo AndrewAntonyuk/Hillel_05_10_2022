@@ -1,8 +1,8 @@
 package hw_10_LoggerToStd;
 
-import hw_10_LoggerParrents.BaseLoggerConfiguration;
-import hw_10_LoggerParrents.BaseLoggerConfigurationLoader;
-import hw_10_LoggerParrents.LoggingLevel;
+import hw_10_Logger.LoggerConfiguration;
+import hw_10_Logger.LoggerConfigurationLoader;
+import hw_10_Logger.LoggingLevel;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -10,9 +10,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class StdLoggerConfigurationLoader extends BaseLoggerConfigurationLoader {
+public class StdLoggerConfigurationLoader extends LoggerConfigurationLoader {
     @Override
-    public BaseLoggerConfiguration load(String fullPathToConfigFile) {
+    public LoggerConfiguration load(String fullPathToConfigFile) {
         StdLoggerConfiguration loggerConfiguration = new StdLoggerConfiguration();
 
         try (InputStream input = new FileInputStream(fullPathToConfigFile)) {

@@ -1,9 +1,8 @@
 package hw_10_LoggerToStd;
 
-import hw_10_LoggerParrents.BaseLoggerConfiguration;
-import hw_10_LoggerParrents.LoggingLevel;
+import hw_10_Logger.LoggerConfiguration;
 
-public class StdLoggerConfiguration extends BaseLoggerConfiguration {
+public class StdLoggerConfiguration extends LoggerConfiguration {
     //region Constructors
     public StdLoggerConfiguration() {
         super();
