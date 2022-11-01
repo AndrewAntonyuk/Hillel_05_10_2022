@@ -32,8 +32,8 @@ public class ValueCalculator {
         System.out.println("Running time is: " + (System.currentTimeMillis() - start) + " ms");
     }
 
-    private void startThread(Float[] inputArray){
-        new Thread(()->{
+    private void startThread(Float[] inputArray) {
+        new Thread(() -> {
             Arrays.setAll(inputArray, (i) -> inputArray[i] = (float) (inputArray[i]
                     * Math.sin(0.2f + (float) i / 5) * Math.cos(0.2f + (float) i / 5)
                     * Math.cos(0.4f + (float) i / 2)));
