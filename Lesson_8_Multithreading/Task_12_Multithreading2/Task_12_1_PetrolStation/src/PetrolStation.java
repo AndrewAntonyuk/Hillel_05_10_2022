@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.concurrent.*;
 
 public class PetrolStation {
-    private final ExecutorService executor = Executors.newFixedThreadPool(3);
+    Semaphore semaphore = new Semaphore(3);
     private Float amount;
 
     //region Constructors
@@ -16,28 +16,35 @@ public class PetrolStation {
     //endregion
 
     public void doRefuel(Float value) throws IllegalArgumentException {
-        Runnable runnable;
-
-        runnable = () -> {
+        Runnable runnable = () -> {
             int sleepTime = (new Random().nextInt(10000 - 3000) + 3000);
 
             try {
-                Thread.sleep(sleepTime);
+                semaphore.acquire();
 
+                Thread.sleep(sleepTime);
                 synchronized (this) {
+                    System.out.println("Fuel before refuel: " + amount);
+
                     if (amount - value >= 0.0f) {
                         amount -= value;
                     } else {
                         throw new IllegalArgumentException("Amount fuel for refuel (" + value
                                 + ") can't be greater than the remainder (" + amount + ")");
+
                     }
+                    System.out.println("Fuel after refuel: " + amount);
                 }
+
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
+            } finally {
+                semaphore.release();
             }
         };
 
-        executor.execute(runnable);
+        Thread thread = new Thread(runnable, ("Thread_For_Value_" + value));
+        thread.start();
     }
 
     //region Getters/Setters
@@ -45,8 +52,8 @@ public class PetrolStation {
         return amount;
     }
 
-    public ExecutorService getExecutor() {
-        return executor;
+    public Semaphore getSemaphore() {
+        return semaphore;
     }
     //endregion
 }

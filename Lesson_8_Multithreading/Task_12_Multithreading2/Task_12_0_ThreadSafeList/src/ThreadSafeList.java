@@ -1,37 +1,41 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class ThreadSafeList<T> {
-    private T[] list;
+    private ArrayList<T> collection;
 
     //region Constructors
     public ThreadSafeList() {
-        this.list = (T[]) new Object[0];
+        this.collection = new ArrayList<T>();
     }
 
-    public ThreadSafeList(T[] list) {
-        this.list = list;
+    public ThreadSafeList(ArrayList<T> collection) {
+        this.collection = collection;
     }
     //endregion
 
     public synchronized void add(T t) {
-        list = Arrays.copyOf(list, list.length + 1);
-        list[list.length - 1] = t;
+        collection.add(t);
     }
 
     public synchronized void remove(int i) throws IndexOutOfBoundsException {
-        if (i >= 0 && i < list.length) {
-            T[] newList = (T[]) new Object[list.length - 1];
-            System.arraycopy(list, 0, newList, 0, i);
-            System.arraycopy(list, i + 1, newList, i, list.length - i - 1);
-            list = newList;
+        if (i >= 0 && i < collection.size()) {
+            collection.remove(i);
+        } else {
+            throw new IndexOutOfBoundsException("Index " + i + " is beyond the legal range!");
+        }
+    }
+
+    public synchronized void remove(T i) throws IndexOutOfBoundsException {
+        if (collection.contains(i)) {
+            collection.remove(i);
         } else {
             throw new IndexOutOfBoundsException("Index " + i + " is beyond the legal range!");
         }
     }
 
     public synchronized T get(int i) throws IndexOutOfBoundsException {
-        if (i < list.length && i >= 0) {
-            return list[i];
+        if (i < collection.size() && i >= 0) {
+            return collection.get(i);
         } else {
             throw new IndexOutOfBoundsException("Index " + i + " is beyond the legal range!");
         }
@@ -40,7 +44,7 @@ public class ThreadSafeList<T> {
     @Override
     public String toString() {
         return "ThreadSafeList{" +
-                "list=" + Arrays.toString(list) +
+                "list=" + collection.toString() +
                 '}';
     }
 }

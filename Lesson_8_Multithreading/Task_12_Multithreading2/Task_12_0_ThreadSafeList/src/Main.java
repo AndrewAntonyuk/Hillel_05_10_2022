@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 public class Main {
@@ -15,7 +16,7 @@ public class Main {
                 safeList.add(25.4f);
                 safeList.add(21.4f);
                 safeList.add(20.4f);
-                safeList.remove(1);
+                safeList.remove(2);
                 countDownLatch.countDown();
             };
         };
@@ -25,7 +26,7 @@ public class Main {
                 safeList.add(0.4f);
                 safeList.add(0.8f);
                 safeList.add(10.7f);
-                safeList.remove(3);
+                safeList.remove(10.7f);
                 countDownLatch.countDown();
             };
         };
@@ -35,7 +36,7 @@ public class Main {
                 safeList.add(45.4f);
                 safeList.add(48.4f);
                 safeList.add(96.4f);
-                safeList.remove(4);
+                safeList.remove(45.4f);
                 countDownLatch.countDown();
             };
         };
@@ -49,8 +50,8 @@ public class Main {
         thread3.start();
 
         try {
-            countDownLatch.await();
-        } catch (InterruptedException e) {
+            countDownLatch.await(5, TimeUnit.SECONDS);
+        } catch (InterruptedException | IndexOutOfBoundsException e) {
             throw new RuntimeException(e);
         }
 
