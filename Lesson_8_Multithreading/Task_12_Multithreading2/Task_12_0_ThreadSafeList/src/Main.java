@@ -17,6 +17,7 @@ public class Main {
                 safeList.add(21.4f);
                 safeList.add(20.4f);
                 safeList.remove(2);
+                System.out.println("Element 1: " + safeList.get(1));
                 countDownLatch.countDown();
             };
         };
@@ -25,6 +26,7 @@ public class Main {
             return () -> {
                 safeList.add(0.4f);
                 safeList.add(0.8f);
+                System.out.println("Element 1: " + safeList.get(1));
                 safeList.add(10.7f);
                 safeList.remove(10.7f);
                 countDownLatch.countDown();
@@ -35,6 +37,7 @@ public class Main {
             return () -> {
                 safeList.add(45.4f);
                 safeList.add(48.4f);
+                System.out.println("Element 1: " + safeList.get(1));
                 safeList.add(96.4f);
                 safeList.remove(45.4f);
                 countDownLatch.countDown();

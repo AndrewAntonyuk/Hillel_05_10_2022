@@ -18,27 +18,15 @@ public class ThreadSafeList<T> {
     }
 
     public synchronized void remove(int i) throws IndexOutOfBoundsException {
-        if (i >= 0 && i < collection.size()) {
-            collection.remove(i);
-        } else {
-            throw new IndexOutOfBoundsException("Index " + i + " is beyond the legal range!");
-        }
+        collection.remove(i);
     }
 
     public synchronized void remove(T i) throws IndexOutOfBoundsException {
-        if (collection.contains(i)) {
-            collection.remove(i);
-        } else {
-            throw new IndexOutOfBoundsException("Index " + i + " is beyond the legal range!");
-        }
+        collection.remove(i);
     }
 
     public synchronized T get(int i) throws IndexOutOfBoundsException {
-        if (i < collection.size() && i >= 0) {
-            return collection.get(i);
-        } else {
-            throw new IndexOutOfBoundsException("Index " + i + " is beyond the legal range!");
-        }
+        return collection.get(i);
     }
 
     @Override
