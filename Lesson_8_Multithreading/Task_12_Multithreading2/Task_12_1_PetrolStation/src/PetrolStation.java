@@ -2,9 +2,9 @@ import java.util.Random;
 import java.util.concurrent.*;
 
 public class PetrolStation {
-    Semaphore semaphore = new Semaphore(3);
+    private final ExecutorService executor = Executors.newCachedThreadPool();
+    private final Semaphore semaphore = new Semaphore(3);
     private Float amount;
-    private ExecutorService executor = Executors.newFixedThreadPool(3);
 
     //region Constructors
     public PetrolStation() {
@@ -22,12 +22,22 @@ public class PetrolStation {
 
             try {
                 semaphore.acquire();
+                boolean isRefuel = false;
 
-                Thread.sleep(sleepTime);
-                synchronized (this) {
-                    System.out.println("Fuel before refuel: " + amount);
-                    doSubtraction(value);
-                    System.out.println("Fuel after refuel: " + amount);
+                synchronized (PetrolStation.this) {
+                    if (amount - value >= 0.0f) {
+                        System.out.println("Fuel before refuel: " + amount);
+                        amount -= value;
+                        System.out.println("Fuel after refuel: " + amount);
+                        isRefuel = true;
+                    } else {
+                        throw new IllegalArgumentException("Amount fuel for refuel (" + value
+                                + ") can't be greater than the remainder (" + amount + ")");
+                    }
+                }
+
+                if (isRefuel) {
+                    Thread.sleep(sleepTime);
                 }
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
@@ -37,15 +47,6 @@ public class PetrolStation {
         };
 
         executor.execute(runnable);
-    }
-
-    private void doSubtraction(final float valueSubtract) {
-        if (amount - valueSubtract >= 0.0f) {
-            amount -= valueSubtract;
-        } else {
-            throw new IllegalArgumentException("Amount fuel for refuel (" + valueSubtract
-                    + ") can't be greater than the remainder (" + amount + ")");
-        }
     }
 
     //region Getters/Setters
