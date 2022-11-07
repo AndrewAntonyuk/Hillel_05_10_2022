@@ -1,13 +1,19 @@
+package valueCalculator;
+
+import jdk.jfr.DataAmount;
+import org.openjdk.jmh.annotations.*;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.*;
-
+@State(Scope.Benchmark)
 public class ValueCalculator {
     private final int size = 1000000;
     private final int halfSize = size / 2;
     private final float[] baseArray = new float[size];
-
+    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
     public void doCalc() {
         long start = System.currentTimeMillis();
         float[] halfArray1 = new float[halfSize];
