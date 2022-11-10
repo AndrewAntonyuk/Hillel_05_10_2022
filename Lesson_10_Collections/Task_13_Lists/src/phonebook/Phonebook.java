@@ -2,16 +2,32 @@ package phonebook;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
-abstract public class Phonebook<T> {
-    private final List<T> internalList = new ArrayList<>();
+public class Phonebook<R> {
+    private final List<Record> internalList = new ArrayList<>();
 
-    abstract public void add(T newRecord);
+    public void add(Record newRecord) {
+        internalList.add(newRecord);
+    }
 
-    abstract public T find(String key);
+    public Record find(String key) {
+        return internalList.stream()
+                .filter(record -> key.equals(record.getName()))
+                .findFirst()
+                .orElse(null);
+    }
 
-    abstract public List<T> findAll(String key);
+    public List<Record> findAll(String key) {
+        List<Record> newList = internalList.stream()
+                .filter(record -> key.equals(record.getName()))
+                .toList();
+
+        if (newList.isEmpty()) {
+            return null;
+        } else {
+            return newList;
+        }
+    }
 
     @Override
     public String toString() {

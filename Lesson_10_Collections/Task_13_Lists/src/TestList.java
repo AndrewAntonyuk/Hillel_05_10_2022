@@ -15,17 +15,17 @@ public class TestList<T> {
 
     public void calcOccurrence(List<String> sourceList) {
         for (String s : new HashSet<>(sourceList)) {
-            System.out.println(s + ": " + Collections.frequency(sourceList, s));
+            System.out.println(s + ": " + sourceList.stream().filter(o -> o.equals(s)).count());
         }
     }
 
-    public HashMap<String, Integer> findOccurrence(List<String> sourceList) {
-        HashMap<String, Integer> destinationHashMap = new HashMap<>();
+    public List<String> findOccurrence(List<String> sourceList) {
+        List<String> destinationList = new ArrayList<>();
 
         for (String s : new HashSet<>(sourceList)) {
-            destinationHashMap.put(s, Collections.frequency(sourceList, s));
+            destinationList.add("\n{name: \"" + s + "\", occurrence: " + sourceList.stream().filter(o -> o.equals(s)).count() + "}");
         }
 
-        return destinationHashMap;
+        return destinationList;
     }
 }

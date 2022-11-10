@@ -1,4 +1,4 @@
-package phonebook.record;
+package phonebook;
 
 public class Record {
     private String name;
@@ -20,7 +20,7 @@ public class Record {
 
     @Override
     public String toString() {
-        return "{Name: " + getName() + ", phone: " + getPhone() + "}\n";
+        return "\n{Name: " + getName() + ", phone: " + getPhone() + "}";
     }
 
     //region Getters/Setters
