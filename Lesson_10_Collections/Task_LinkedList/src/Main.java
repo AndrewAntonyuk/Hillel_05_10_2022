@@ -1,100 +1,82 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
-        LinkedList linkedList = new LinkedList();
+        LinkedList<String> linkedList = new LinkedList<String>();
 
-        //region Test for addFirst()
-        linkedList.addFirst(25);
-        linkedList.addFirst("Test");
-        linkedList.addFirst(36.8f);
-
-        System.out.println(linkedList.toString());
+        //region Test for .getSize() .toString() .isEmpty()
+        System.out.println("--------------------------------");
+        System.out.println("Test for .getSize() .toString() .isEmpty()");
+        System.out.println(linkedList);
+        System.out.println("Is list empty: " + linkedList.isEmpty());
+        System.out.println("Size: " + linkedList.getSize());
+        System.out.println("================================");
         //endregion
 
-        //region Test for isContained(o)
-        System.out.println("Is linkedList contain \"25\": " + linkedList.isContain(25));
-        System.out.println("Is linkedList contain \"PppDDr\": " + linkedList.isContain("PppDDr"));
+        //region Test for .addAtBegin() .addAtEnd()
+        System.out.println("--------------------------------");
+        System.out.println("Test for .addAtBegin() .addAtEnd() .isEmpty()");
+        linkedList.addAtEnd("A");
+        linkedList.addAtEnd("B");
+        linkedList.addAtEnd("C");
+        linkedList.addAtBegin("D");
+        linkedList.addAtBegin("Q");
+        System.out.println(linkedList);
+        System.out.println("Is list empty: " + linkedList.isEmpty());
+        System.out.println("Size: " + linkedList.getSize());
+        System.out.println("================================");
         //endregion
 
-        //region Test for size()
-        System.out.println("Current size: " + linkedList.size());
+        //region Test for .removeFromBegin() .removeFromEnd()
+        System.out.println("--------------------------------");
+        System.out.println("Test for .removeFromBegin() .removeFromEnd()");
+        linkedList.removeFromBegin();
+        linkedList.removeFromEnd();
+        System.out.println(linkedList);
+        System.out.println("Size: " + linkedList.getSize());
+        System.out.println("================================");
         //endregion
 
-        //region Test for add(o)
-        linkedList.add(1);
-        linkedList.add(2);
-        linkedList.add(3);
-
-        System.out.println("List after add(): " + linkedList.toString());
+        //region Test for .remove(int) .remove(Object)
+        System.out.println("--------------------------------");
+        System.out.println("Test for .remove(int) .remove(Object)");
+        linkedList.remove(0);
+        linkedList.remove("B");
+        System.out.println(linkedList);
+        System.out.println("Size: " + linkedList.getSize());
+        System.out.println("================================");
         //endregion
 
-        //region Test for remove(o)
-        linkedList.remove("Test");
-        linkedList.remove("GGGgggRR");
-
-        System.out.println("List after remove(): " + linkedList.toString());
-        //endregion
-
-        //region Test for get(i)
-        linkedList.remove("Test");
-        linkedList.remove("GGGgggRR");
-
-        System.out.println("Value at get(1): " + linkedList.get(1));
-        //endregion
-
-        //region Test for set(i) and isEmpty()
-        linkedList.set(2, "Two");
-
-        System.out.println("List after set(2, Two): " + linkedList.toString());
-        System.out.println("Is List empty: " + linkedList.isEmpty());
-        //endregion
-
-        //region Test for clear()
+        //region Test for .clear()
+        System.out.println("--------------------------------");
+        System.out.println("Test for .clear()");
         linkedList.clear();
-
-        System.out.println("List after clear(): " + linkedList.toString());
+        System.out.println(linkedList);
+        System.out.println("Size: " + linkedList.getSize());
+        System.out.println("================================");
         //endregion
 
-        //region Test for isEmpty()
-        System.out.println("Is List empty: " + linkedList.isEmpty());
+        //region Test for .get(int i) .getFirst() .getLast()
+        System.out.println("--------------------------------");
+        System.out.println("Test for .get(int i) .getFirst() .getLast()");
+        linkedList.addAtEnd("A");
+        linkedList.addAtEnd("B");
+        linkedList.addAtEnd("C");
+        linkedList.addAtEnd("E");
+        linkedList.addAtEnd("F");
+        linkedList.addAtEnd("G");
+        System.out.println(linkedList);
+        System.out.println("Element at position 2: " + linkedList.get(2));
+        System.out.println("First element: " + linkedList.getFirst());
+        System.out.println("Last element: " + linkedList.getLast());
+        System.out.println("================================");
         //endregion
 
-        //region Test for toArray()
-        linkedList.add(1);
-        linkedList.add(2);
-        linkedList.add(3);
-        linkedList.add(4);
-        linkedList.add(5);
-
-        System.out.println("Array is: " + Arrays.toString(linkedList.toArray()));
-        //endregion
-
-        //region Test for getFirst()
-        System.out.println("Data at the first: " + (linkedList.getFirst().getData()));
-        //endregion
-
-        //region Test for getLast()
-        System.out.println("Data at the last: " + (linkedList.getLast().getData()));
-        //endregion
-
-        //region Reverse text with linkedList
-        StringBuilder test = new StringBuilder("Hello java!");
-        linkedList.clear();
-
-        for (int i = 0; i < test.length(); i++) {
-            linkedList.add(test.charAt(i));
-        }
-
-        System.out.println("Base text: " + test);
-
-        test = new StringBuilder();
-        for (LinkedList l = linkedList.getLast(); l != null; ) {
-            test.append(l.getData());
-            l = l.getPrevious();
-        }
-
-        System.out.println("Reversed text: " + test);
+        //region Test for .set(int i, E e)
+        System.out.println("--------------------------------");
+        System.out.println("Test for .set(int i, E e)");
+        linkedList.set(2, "P");
+        System.out.println(linkedList);
+        System.out.println("Element at position 2 after .set(2, \"P\"): " + linkedList.get(2));
+        System.out.println("================================");
         //endregion
     }
 }

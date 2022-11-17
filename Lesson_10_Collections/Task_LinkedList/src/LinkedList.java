@@ -1,260 +1,290 @@
-public class LinkedList implements MyLinkedList {
-    private Object data;
-    private int size = 0;
-    private LinkedList first;
-    private LinkedList last;
-    private LinkedList previous;
-    private LinkedList next;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
-    //region Constructors
-    public LinkedList() {
-    }
+public class LinkedList<E> implements MyLinkedList<E> {
+    private transient int size = 0;
+    private transient Node<E> first;
+    private transient Node<E> last;
 
-    public LinkedList(Object data) {
-        this.data = data;
-    }
-    //endregion
+    private void insertAsFirst(E e) {
+        final Node<E> oldFirst = first;
+        first = new Node<>(e, null, first);
 
-    @Override
-    public boolean addFirst(Object o) {
-        if (first != null && last != null) {
-            includeBefore(first, new LinkedList(o));
-        } else {
-            first = new LinkedList(o);
+        if (oldFirst == null) {
             last = first;
-            size++;
-        }
-        return true;
-    }
-
-    private void includeBefore(LinkedList source, LinkedList newUnit) {
-        if (source.previous == null) {
-            source.previous = newUnit;
-            newUnit.next = source;
-            first = newUnit;
         } else {
-            LinkedList previousUnit = source.previous;
-            source.previous = newUnit;
-            previousUnit.next = newUnit;
-            newUnit.next = source;
-            newUnit.previous = previousUnit;
+            oldFirst.previous = first;
         }
+
         size++;
     }
 
-    @Override
-    public boolean isContain(Object o) {
-        for (LinkedList l = first; l != null; ) {
-            if (l.data.equals(o)) {
-                return true;
-            }
+    private void insertAsLast(E e) {
+        final Node<E> oldLast = last;
+        last = new Node<>(e, last, null);
 
-            l = l.next;
-        }
-        return false;
-    }
-
-    @Override
-    public int size() {
-        return size;
-    }
-
-    @Override
-    public boolean add(Object o) {
-        if (first != null && last != null) {
-            includeAfter(last, new LinkedList(o));
-        } else {
-            last = new LinkedList(o);
+        if (oldLast == null) {
             first = last;
-            size++;
-        }
-        return true;
-    }
-
-    private void includeAfter(LinkedList source, LinkedList newUnit) {
-        if (source.next == null) {
-            source.next = newUnit;
-            newUnit.previous = source;
-            last = newUnit;
         } else {
-            LinkedList nextUnit = source.next;
-            source.next = newUnit;
-            nextUnit.previous = newUnit;
-            newUnit.next = nextUnit;
-            newUnit.previous = source;
+            oldLast.next = last;
         }
+
         size++;
     }
 
-    @Override
-    public boolean remove(Object o) {
-        for (LinkedList l = first; l != null; ) {
-            if (l.data.equals(o)) {
-                exclude(l);
-                return true;
-            }
-            l = l.next;
-        }
+    private E extractFirst() {
+        E data = first.data;
 
-        return false;
+        if (first.next == null) {
+            last = null;
+            first.data = null;
+            first = null;
+        } else {
+            first = first.next;
+            first.previous = null;
+        }
+        size--;
+
+        return data;
     }
 
-    private void exclude(LinkedList listUnit) {
-        LinkedList previousUnit = listUnit.previous;
-        LinkedList nextUnit = listUnit.next;
+    private E extractLast() {
+        E data = last.data;
 
-        if (previousUnit != null && nextUnit != null) {
-            previousUnit.next = nextUnit;
-            nextUnit.previous = previousUnit;
-            listUnit.data = null;
-            size--;
-        } else if (previousUnit == null && nextUnit != null) {
-            nextUnit.previous = null;
-            first = nextUnit;
-            listUnit.data = null;
-            size--;
-        } else if (previousUnit != null) {
-            previousUnit.next = null;
-            listUnit.data = null;
-            last = previousUnit;
-            size--;
+        if (last.previous == null) {
+            first = null;
+            last.data = null;
+            last = null;
         } else {
-            first.data = null;
-            first = last = null;
-            size = 0;
+            last = last.previous;
+            last.next = null;
         }
+        size--;
+
+        return data;
+    }
+
+    private E extract(Node<E> node) {
+        E data = node.data;
+        Node<E> next = node.next;
+        Node<E> previous = node.previous;
+
+        if (next == null) {
+            last = previous;
+        } else {
+            next.previous = previous;
+        }
+
+        if (previous == null) {
+            first = next;
+        } else {
+            previous.next = next;
+        }
+
+        node.data = null;
+        node.next = null;
+        node.previous = null;
+        size--;
+
+        return data;
+    }
+
+    private void checkIndex(int i) {
+        if (i >= size || i < 0) {
+            throw new IndexOutOfBoundsException("Index " + i + " is beyond the legal range 0 - " + size);
+        }
+    }
+
+    private Node<E> getNodeByIndex(int i) {
+        int currentIndex;
+        Node<E> entryNode;
+
+        if (i > size / 2) {
+            entryNode = last;
+            currentIndex = size - 1;
+
+            while (entryNode != null) {
+                if (currentIndex == i) {
+                    break;
+                }
+                currentIndex--;
+                entryNode = entryNode.previous;
+            }
+        } else {
+            entryNode = first;
+            currentIndex = 0;
+
+            while (entryNode != null) {
+                if (currentIndex == i) {
+                    break;
+                }
+                currentIndex++;
+                entryNode = entryNode.next;
+            }
+        }
+
+        return entryNode;
+    }
+
+    private Node<E> getNodeByObject(E e) {
+        Node<E> entryNode = first;
+
+        while (entryNode != null) {
+            if (e == null) {
+                if (entryNode.data == null) {
+                    break;
+                }
+            } else {
+                if (e.equals(entryNode.data)) {
+                    break;
+                }
+            }
+
+            entryNode = entryNode.next;
+        }
+
+        return entryNode;
+    }
+
+    @Override
+    public void addAtBegin(E e) {
+        insertAsFirst(e);
+    }
+
+    @Override
+    public void addAtEnd(E e) {
+        insertAsLast(e);
+    }
+
+    @Override
+    public E removeFromBegin() {
+        if (first == null) {
+            throw new NoSuchElementException();
+        }
+
+        return extractFirst();
+    }
+
+    @Override
+    public E removeFromEnd() {
+        if (last == null) {
+            throw new NoSuchElementException();
+        }
+
+        return extractLast();
+    }
+
+    @Override
+    public E remove(int i) {
+        checkIndex(i);
+
+        return extract(getNodeByIndex(i));
+    }
+
+    @Override
+    public E remove(E e) {
+        Node<E> node = getNodeByObject(e);
+
+        if (node == null) {
+            throw new NoSuchElementException();
+        }
+
+        return extract(node);
     }
 
     @Override
     public void clear() {
-        for (LinkedList l = first; l != null; ) {
-            l.previous = null;
-            l.data = null;
-            l = l.next;
+        Node<E> node = first;
+
+        while (node != null) {
+            Node<E> nextNode = node.next;
+            node.data = null;
+            node.previous = null;
+            node.next = null;
+
+            node = nextNode;
         }
 
-        if (first != null) {
-            first.data = null;
-            last.data = null;
-            first = last = null;
-        }
-
+        first = null;
+        last = null;
         size = 0;
     }
 
     @Override
-    public Object get(int i) {
-        LinkedList l = getListUnit(i);
+    public E get(int i) {
+        checkIndex(i);
 
-        if (l != null) {
-            return l.data;
-        }
-
-        return null;
+        return getNodeByIndex(i).data;
     }
 
     @Override
-    public boolean set(int i, Object o) {
-        LinkedList l = getListUnit(i);
+    public E set(int i, E e) {
+        Node<E> node;
 
-        if (l != null) {
-            l.data = o;
-            return true;
-        }
+        checkIndex(i);
+        node = getNodeByIndex(i);
 
-        return false;
-    }
+        E data = node.data;
+        node.data = e;
 
-    private LinkedList getListUnit(int i) {
-        if (size == 0) {
-            throw new IndexOutOfBoundsException("List is empty");
-        }
-        if (i >= size) {
-            throw new IndexOutOfBoundsException("Index " + i + " is beyond range " + (size - 1));
-        }
-
-        int counter;
-
-        if (i > size / 2) {
-            counter = size - 1;
-            for (LinkedList l = last; l != null; ) {
-                if (counter == i) {
-                    return l;
-                }
-                l = l.previous;
-                counter--;
-            }
-        } else {
-            counter = 0;
-            for (LinkedList l = first; l != null; ) {
-                if (counter == i) {
-                    return l;
-                }
-                l = l.next;
-                counter++;
-            }
-        }
-
-        return null;
-    }
-
-    @Override
-    public Object[] toArray() {
-        Object[] newArray = new Object[size];
-        int counter = 0;
-
-        for (LinkedList l = first; l != null; ) {
-            newArray[counter++] = l.data;
-            l = l.next;
-        }
-
-        return newArray;
+        return data;
     }
 
     @Override
     public boolean isEmpty() {
-        return size == 0;
+        return size <= 0;
     }
 
     @Override
-    public LinkedList getFirst() {
-        return first;
+    public E getFirst() {
+        if (first == null) {
+            throw new NoSuchElementException();
+        }
+
+        return first.data;
     }
 
     @Override
-    public LinkedList getLast() {
-        return last;
+    public E getLast() {
+        if (last == null) {
+            throw new NoSuchElementException();
+        }
+
+        return last.data;
+    }
+
+    @Override
+    public int getSize() {
+        return size;
     }
 
     @Override
     public String toString() {
-        String returnString = "Values in the list = [";
+        Node<E> i = first;
+        StringBuilder result = new StringBuilder("[");
 
-        for (LinkedList l = first; l != null; ) {
-            returnString += l.data;
-
-            if (l.next != null) {
-                returnString += ",";
-            }
-
-            l = l.next;
+        if (i != null) {
+            result.append(i.data.toString());
+            i = i.next;
         }
-        returnString += "]";
 
-        return returnString;
+        for (; i != null; i = i.next) {
+            result.append(", ").append(i.data.toString());
+        }
+
+        return result + "]";
     }
 
-    //region Getters/Setters
-    public Object getData() {
-        return data;
-    }
+    private static class Node<E> {
+        E data;
+        Node<E> next;
+        Node<E> previous;
 
-    public LinkedList getPrevious() {
-        return previous;
+        public Node(E data, Node<E> previous, Node<E> next) {
+            this.data = data;
+            this.next = next;
+            this.previous = previous;
+        }
     }
-
-    public LinkedList getNext() {
-        return next;
-    }
-    //endregion
 }

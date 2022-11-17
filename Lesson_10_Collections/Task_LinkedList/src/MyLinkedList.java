@@ -1,14 +1,27 @@
-public interface MyLinkedList<T>{
-    public boolean addFirst(T t);
-    public boolean isContain(T t);
-    public int size();
-    public boolean add(T t);
-    public boolean remove(Object o);
+public interface MyLinkedList<T> {
+    public void addAtBegin(T t);
+
+    public void addAtEnd(T t);
+
+    public T removeFromBegin();
+
+    public T removeFromEnd();
+
+    public T remove(int i);
+
+    public T remove(T t);
+
     public void clear();
+
     public T get(int i);
-    public boolean set(int i, T t);
-    public Object[] toArray();
-    public  boolean isEmpty();
-    public  LinkedList getFirst();
-    public  LinkedList getLast();
+
+    public T set(int i, T t);
+
+    public boolean isEmpty();
+
+    public T getFirst();
+
+    public T getLast();
+
+    public int getSize();
 }
