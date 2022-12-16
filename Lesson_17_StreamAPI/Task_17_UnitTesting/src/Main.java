@@ -26,8 +26,8 @@ public class Main {
 
         //region Test for tasks 14-15
         Main main = new Main();
-        int[] testArray = new int[]{4,0,0,7,0,8,5};
-        int[] testArray1 = new int[]{4,1,1,1,4,2,1,4};
+        int[] testArray = new int[]{4, 0, 0, 7, 0, 8, 5};
+        int[] testArray1 = new int[]{4, 1, 1, 1, 4, 2, 1, 4};
 
         System.out.println("==============================");
         System.out.println("Test for get array after last 4 in input array (14)");
@@ -46,9 +46,9 @@ public class Main {
     }
 
     public int[] getAllAfterLast4(final int[] inputArray) {
-        for (int i = inputArray.length - 1; i >=0 ; i--) {
+        for (int i = inputArray.length - 1; i >= 0; i--) {
             if (inputArray[i] == 4) {
-                return Arrays.copyOfRange(inputArray,i + 1,inputArray.length);
+                return Arrays.copyOfRange(inputArray, i + 1, inputArray.length);
             }
         }
         throw new RuntimeException("Input array should have least one 4");
@@ -57,12 +57,12 @@ public class Main {
     public boolean isContainOnly1And4(final int[] inputArray) {
         boolean containPattern = false;
 
-        for (int i = inputArray.length - 1; i >0 ; i--) {
+        for (int i = inputArray.length - 1; i > 0; i--) {
             if (inputArray[i] != 4 && inputArray[i] != 1) {
                 return false;
             }
 
-            if((inputArray[i] == 4 && inputArray[i-1] == 1) || (inputArray[i] == 1 && inputArray[i-1] == 4)) {
+            if ((inputArray[i] == 4 && inputArray[i - 1] == 1) || (inputArray[i] == 1 && inputArray[i - 1] == 4)) {
                 containPattern = true;
             }
         }

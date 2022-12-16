@@ -16,40 +16,35 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MainTest {
     private Main testMain;
 
-    @BeforeEach
-    void init() {
-        testMain = new Main();
-    }
-
     private static Stream<Arguments> afterLast4TypicalTest() {
         return Stream.of(
-                Arguments.of(new int[]{4,0,0,7,0,8,5}, new int[]{0,0,7,0,8,5}),
-                Arguments.of(new int[]{22,0,0,4,0,8,5}, new int[]{0,8,5}),
-                Arguments.of(new int[]{4,0,0,7,0,4,5}, new int[]{5})
+                Arguments.of(new int[]{4, 0, 0, 7, 0, 8, 5}, new int[]{0, 0, 7, 0, 8, 5}),
+                Arguments.of(new int[]{22, 0, 0, 4, 0, 8, 5}, new int[]{0, 8, 5}),
+                Arguments.of(new int[]{4, 0, 0, 7, 0, 4, 5}, new int[]{5})
         );
     }
 
     private static Stream<Arguments> afterLast4When4IsLastTest() {
         return Stream.of(
-                Arguments.of(new int[]{4,0,0,7,0,8,4}, new int[]{}),
-                Arguments.of(new int[]{22,0,0,4,0,8,4}, new int[]{}),
-                Arguments.of(new int[]{4,0,0,7,0,4,4}, new int[]{})
+                Arguments.of(new int[]{4, 0, 0, 7, 0, 8, 4}, new int[]{}),
+                Arguments.of(new int[]{22, 0, 0, 4, 0, 8, 4}, new int[]{}),
+                Arguments.of(new int[]{4, 0, 0, 7, 0, 4, 4}, new int[]{})
         );
     }
 
     private static Stream<Arguments> only1And4TypicalTest() {
         return Stream.of(
-                Arguments.of(new int[]{1,4,4,4,4}, true),
-                Arguments.of(new int[]{1,1,1,1,4}, true),
-                Arguments.of(new int[]{1,1,1,4,4}, true),
-                Arguments.of(new int[]{4,1,4,1,4,1}, true)
+                Arguments.of(new int[]{1, 4, 4, 4, 4}, true),
+                Arguments.of(new int[]{1, 1, 1, 1, 4}, true),
+                Arguments.of(new int[]{1, 1, 1, 4, 4}, true),
+                Arguments.of(new int[]{4, 1, 4, 1, 4, 1}, true)
         );
     }
 
     private static Stream<Arguments> only1And4WithOnly1Test() {
         return Stream.of(
-                Arguments.of(new int[]{1,1,1,1}, false),
-                Arguments.of(new int[]{1,1,1,1,1,1,1}, false),
+                Arguments.of(new int[]{1, 1, 1, 1}, false),
+                Arguments.of(new int[]{1, 1, 1, 1, 1, 1, 1}, false),
                 Arguments.of(new int[]{1}, false)
         );
     }
@@ -57,17 +52,22 @@ public class MainTest {
     private static Stream<Arguments> only1And4WithOnly4Test() {
         return Stream.of(
                 Arguments.of(new int[]{4}, false),
-                Arguments.of(new int[]{4,4,4,4,4,4,4}, false),
-                Arguments.of(new int[]{4,4,4}, false)
+                Arguments.of(new int[]{4, 4, 4, 4, 4, 4, 4}, false),
+                Arguments.of(new int[]{4, 4, 4}, false)
         );
     }
 
     private static Stream<Arguments> only1And4WithOthersNumbersTest() {
         return Stream.of(
-                Arguments.of(new int[]{4,1,1,1,4,2,1,4}, false),
-                Arguments.of(new int[]{4,1,55,1,4}, false),
+                Arguments.of(new int[]{4, 1, 1, 1, 4, 2, 1, 4}, false),
+                Arguments.of(new int[]{4, 1, 55, 1, 4}, false),
                 Arguments.of(new int[]{-365}, false)
         );
+    }
+
+    @BeforeEach
+    void init() {
+        testMain = new Main();
     }
 
     @ParameterizedTest(name = "Result with parameters {0} should be {1}")

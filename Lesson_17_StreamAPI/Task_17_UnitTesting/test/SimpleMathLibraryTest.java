@@ -12,11 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SimpleMathLibraryTest {
     private SimpleMathLibrary mathLibrary;
 
-    @BeforeEach
-    void init() {
-        mathLibrary = new SimpleMathLibrary();
-    }
-
     private static Stream<Arguments> provideAddForTypicalTest() {
         return Stream.of(
                 Arguments.of(2.0, 5.0, 7.0),
@@ -55,6 +50,11 @@ public class SimpleMathLibraryTest {
                 Arguments.of(0.0, 12.9, -12.9),
                 Arguments.of(12.5, 25.0, -12.5)
         );
+    }
+
+    @BeforeEach
+    void init() {
+        mathLibrary = new SimpleMathLibrary();
     }
 
     @ParameterizedTest(name = "Test with parameters {0} and {1} should be {2}")
