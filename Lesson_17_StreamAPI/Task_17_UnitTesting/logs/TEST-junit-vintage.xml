@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JUnit Vintage" tests="0" skipped="0" failures="0" errors="0" time="0" hostname="DESKTOP-KNI62B3" timestamp="2022-12-17T00:16:59">
+<testsuite name="JUnit Vintage" tests="0" skipped="0" failures="0" errors="0" time="0" hostname="DESKTOP-KNI62B3" timestamp="2022-12-18T12:04:59">
 <properties>
 <property name="file.encoding" value="Cp1251"/>
 <property name="file.separator" value="\"/>
@@ -39,7 +39,7 @@
 <property name="sun.cpu.endian" value="little"/>
 <property name="sun.cpu.isalist" value="amd64"/>
 <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-<property name="sun.java.command" value="libs/junit-platform-console-standalone-1.9.1.jar -cp out -c SimpleMathLibraryTest --reports-dir logs"/>
+<property name="sun.java.command" value="libs/junit-platform-console-standalone-1.9.1.jar -cp out -c TestRunner -reports-dir logs"/>
 <property name="sun.java.launcher" value="SUN_STANDARD"/>
 <property name="sun.jnu.encoding" value="Cp1251"/>
 <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>

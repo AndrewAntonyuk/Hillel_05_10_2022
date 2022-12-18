@@ -11,15 +11,15 @@ public class Main {
         System.out.println("==============================");
         System.out.println("Test for parser with String (10-13)");
         System.out.println("==============================");
-        System.out.println(TestResultParser.parse("logs/TEST-junit-jupiter.xml"));
+        System.out.println(TestResultParser.parse("logs/TEST-junit-platform-suite.xml"));
         System.out.println("==============================");
         System.out.println("Test for parser with File (10-13)");
         System.out.println("==============================");
-        System.out.println(TestResultParser.parse(new File("logs/TEST-junit-jupiter.xml")));
+        System.out.println(TestResultParser.parse(new File("logs/TEST-junit-platform-suite.xml")));
         System.out.println("==============================");
         System.out.println("Test for parser with File (10-13)");
         System.out.println("==============================");
-        Path path = Path.of("logs/TEST-junit-jupiter.xml");
+        Path path = Path.of("logs/TEST-junit-platform-suite.xml");
         System.out.println(TestResultParser.parse(path));
         System.out.println("==============================");
         //endregion

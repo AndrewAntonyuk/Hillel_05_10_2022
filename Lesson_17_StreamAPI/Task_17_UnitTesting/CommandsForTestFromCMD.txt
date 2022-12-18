@@ -1,9 +1,10 @@
 #Compile
-$ javac -d out -sourcepath test -cp libs/junit-platform-console-standalone-1.9.1.jar src/SimpleMathLibrary.java test/SimpleMathLibraryTest.java
+$ javac -d out -sourcepath test -cp libs/junit-platform-console-standalone-1.9.1.jar src/testresult/TestResult.java src/testresult/TestResultParser.java src/SimpleMathLibrary.java src/Main.java test/TestRunner.java
 
 #Execute test
-$ java -jar libs/junit-platform-console-standalone-1.9.1.jar -cp out -c SimpleMathLibraryTest
+$ java -jar libs/junit-platform-console-standalone-1.9.1.jar -cp out -c TestRunner
 
 #Execute test with create .XML log
-$ java -jar libs/junit-platform-console-standalone-1.9.1.jar -cp out -c SimpleMathLibraryTest --reports-dir logs
+$ java -jar libs/junit-platform-console-standalone-1.9.1.jar -cp out -c TestRunner -reports-dir logs
+
 

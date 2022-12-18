@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JUnit Jupiter" tests="15" skipped="0" failures="0" errors="0" time="0.159" hostname="DESKTOP-KNI62B3" timestamp="2022-12-17T00:16:59">
+<testsuite name="JUnit Jupiter" tests="0" skipped="0" failures="0" errors="0" time="0" hostname="DESKTOP-KNI62B3" timestamp="2022-12-18T12:04:59">
 <properties>
 <property name="file.encoding" value="Cp1251"/>
 <property name="file.separator" value="\"/>
@@ -39,7 +39,7 @@
 <property name="sun.cpu.endian" value="little"/>
 <property name="sun.cpu.isalist" value="amd64"/>
 <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-<property name="sun.java.command" value="libs/junit-platform-console-standalone-1.9.1.jar -cp out -c SimpleMathLibraryTest --reports-dir logs"/>
+<property name="sun.java.command" value="libs/junit-platform-console-standalone-1.9.1.jar -cp out -c TestRunner -reports-dir logs"/>
 <property name="sun.java.launcher" value="SUN_STANDARD"/>
 <property name="sun.jnu.encoding" value="Cp1251"/>
 <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -57,96 +57,6 @@
 <property name="user.timezone" value="Europe/Kiev"/>
 <property name="user.variant" value=""/>
 </properties>
-<testcase name="typical_minus_test(double, double, double)[2]" classname="SimpleMathLibraryTest" time="0">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:typical_minus_test(double, double, double)]/[test-template-invocation:#2]
-display-name: Test with parameters 124.5 and 124.5 should be 0.0
-]]></system-out>
-</testcase>
-<testcase name="typical_minus_test(double, double, double)[3]" classname="SimpleMathLibraryTest" time="0.003">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:typical_minus_test(double, double, double)]/[test-template-invocation:#3]
-display-name: Test with parameters 1002.0 and 875.25 should be 126.75
-]]></system-out>
-</testcase>
-<testcase name="typical_minus_test(double, double, double)[1]" classname="SimpleMathLibraryTest" time="0">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:typical_minus_test(double, double, double)]/[test-template-invocation:#1]
-display-name: Test with parameters 5.0 and 2.0 should be 3.0
-]]></system-out>
-</testcase>
-<testcase name="minuend_great_than_subtrahend_minus_test(double, double, double)[3]" classname="SimpleMathLibraryTest" time="0">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:minuend_great_than_subtrahend_minus_test(double, double, double)]/[test-template-invocation:#3]
-display-name: Test with parameters 12.5 and 25.0 should be -12.5
-]]></system-out>
-</testcase>
-<testcase name="minuend_great_than_subtrahend_minus_test(double, double, double)[2]" classname="SimpleMathLibraryTest" time="0">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:minuend_great_than_subtrahend_minus_test(double, double, double)]/[test-template-invocation:#2]
-display-name: Test with parameters 0.0 and 12.9 should be -12.9
-]]></system-out>
-</testcase>
-<testcase name="with_less_than_zero_add_test(double, double, double)[2]" classname="SimpleMathLibraryTest" time="0">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:with_less_than_zero_add_test(double, double, double)]/[test-template-invocation:#2]
-display-name: Test with parameters 8.1 and -124.5 should be -116.4
-]]></system-out>
-</testcase>
-<testcase name="minuend_great_than_subtrahend_minus_test(double, double, double)[1]" classname="SimpleMathLibraryTest" time="0">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:minuend_great_than_subtrahend_minus_test(double, double, double)]/[test-template-invocation:#1]
-display-name: Test with parameters 0.0 and 5.0 should be -5.0
-]]></system-out>
-</testcase>
-<testcase name="with_less_than_zero_add_test(double, double, double)[3]" classname="SimpleMathLibraryTest" time="0">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:with_less_than_zero_add_test(double, double, double)]/[test-template-invocation:#3]
-display-name: Test with parameters -875.25 and 1002.0 should be 126.75
-]]></system-out>
-</testcase>
-<testcase name="with_less_than_zero_add_test(double, double, double)[1]" classname="SimpleMathLibraryTest" time="0">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:with_less_than_zero_add_test(double, double, double)]/[test-template-invocation:#1]
-display-name: Test with parameters -5.0 and 2.0 should be -3.0
-]]></system-out>
-</testcase>
-<testcase name="typical_add_test(double, double, double)[1]" classname="SimpleMathLibraryTest" time="0.031">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:typical_add_test(double, double, double)]/[test-template-invocation:#1]
-display-name: Test with parameters 2.0 and 5.0 should be 7.0
-]]></system-out>
-</testcase>
-<testcase name="typical_add_test(double, double, double)[2]" classname="SimpleMathLibraryTest" time="0">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:typical_add_test(double, double, double)]/[test-template-invocation:#2]
-display-name: Test with parameters 124.5 and 8.1 should be 132.6
-]]></system-out>
-</testcase>
-<testcase name="typical_add_test(double, double, double)[3]" classname="SimpleMathLibraryTest" time="0">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:typical_add_test(double, double, double)]/[test-template-invocation:#3]
-display-name: Test with parameters 1002.0 and 875.25 should be 1877.25
-]]></system-out>
-</testcase>
-<testcase name="reverse_add_direction_test(double, double, double)[1]" classname="SimpleMathLibraryTest" time="0.015">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:reverse_add_direction_test(double, double, double)]/[test-template-invocation:#1]
-display-name: Test with parameters 5.0 and 2.0 should be 7.0
-]]></system-out>
-</testcase>
-<testcase name="reverse_add_direction_test(double, double, double)[2]" classname="SimpleMathLibraryTest" time="0">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:reverse_add_direction_test(double, double, double)]/[test-template-invocation:#2]
-display-name: Test with parameters 8.1 and 124.5 should be 132.6
-]]></system-out>
-</testcase>
-<testcase name="reverse_add_direction_test(double, double, double)[3]" classname="SimpleMathLibraryTest" time="0">
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:SimpleMathLibraryTest]/[test-template:reverse_add_direction_test(double, double, double)]/[test-template-invocation:#3]
-display-name: Test with parameters 875.25 and 1002.0 should be 1877.25
-]]></system-out>
-</testcase>
 <system-out><![CDATA[
 unique-id: [engine:junit-jupiter]
 display-name: JUnit Jupiter
