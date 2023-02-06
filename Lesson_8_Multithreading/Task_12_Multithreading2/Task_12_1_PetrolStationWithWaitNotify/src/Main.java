@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        PetrolStation petrolStation = new PetrolStation(3, 100.0);
+        PetrolStation petrolStation = new PetrolStation(5, 100.0);
 
         petrolStation.doRefuel(10.0);
         petrolStation.doRefuel(11.0);
@@ -11,5 +11,7 @@ public class Main {
         petrolStation.doRefuel(13.0);
         petrolStation.doRefuel(14.0);
         petrolStation.doRefuel(15.0);
+        petrolStation.doRefuel(16.0);
+        petrolStation.doRefuel(17.0);
     }
 }
