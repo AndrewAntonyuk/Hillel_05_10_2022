@@ -1,0 +1,16 @@
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for: 5.0 = 5.0 / 1.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for: 0.0 = 0.0 / 5.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for: 256.0 = 1024.0 / 4.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for: -6.25 = -12.5 / 2.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for: -6.25 = 12.5 / -2.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for: 0.0 = 0.0 * 0.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for: 1.0 = 1.0 * 1.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for: 4.0 = 2.0 * 2.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for: -105.0 = -2.0 * 52.5 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for: 125.36 = 1.0 * 125.36 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for: 125.36 = 125.36 * 1.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for divide by zero: exception "Divisor can't be 0" was result for 5.0 / 0.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for divide by zero: exception "Divisor can't be 0" was result for 0.0 / 0.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for divide by zero: exception "Divisor can't be 0" was result for -1024.0 / 0.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for divide by zero: exception "Divisor can't be 0" was result for -12.5 / 0.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathMulDiv] Test complete for divide by zero: exception "Divisor can't be 0" was result for 102.75 / 0.0 

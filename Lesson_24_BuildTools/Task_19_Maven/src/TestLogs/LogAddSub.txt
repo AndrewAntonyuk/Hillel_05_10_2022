@@ -1,0 +1,8 @@
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathAddSub] Test complete for: 7.0 = 5.0 + 2.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathAddSub] Test complete for: 7.0 = 2.0 + 5.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathAddSub] Test complete for: 132.6 = 8.1 + 124.5 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathAddSub] Test complete for: 1877.25 = 875.25 + 1002.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathAddSub] Test complete for: 3.0 = 5.0 - 2.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathAddSub] Test complete for: -3.0 = 2.0 - 5.0 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathAddSub] Test complete for: -28.14 = -22.36 - 5.78 
+[04.03.2023-14:44:57] [INFO ] Message: In the class [javapro.basemath.MathAddSub] Test complete for: 8.2 = 10.5 - 2.3 
