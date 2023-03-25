@@ -1,68 +1,53 @@
-import com.company.entitys.Student;
-import com.company.utils.HibernateSession;
+import com.aveshnick.dao.StudentDao;
+import com.aveshnick.entities.Student;
+import com.aveshnick.configs.HibernateSession;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import java.util.ArrayList;
 import java.util.List;
 
+//entities
 public class App {
     public static void main(String[] args) {
-        try (Session session = HibernateSession.getSessionFactory().openSession()) {
-            List<Student> students;
-            Student student;
+        StudentDao studentDao = new StudentDao();
+        Student student;
 
-            System.out.println(System.lineSeparator() + "------------Get all exist students--------------");
-            students = session.createQuery("FROM Student", Student.class).getResultList();
-            System.out.println();
-            students.forEach(System.out::println);
-            System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" + System.lineSeparator());
+        System.out.println(System.lineSeparator() + "------------Add new student--------------");
+//        studentDao.save(new Student("Alli", "king@jbs.com"));
 
-            System.out.println(System.lineSeparator() + "------------Get one student--------------");
-            student = session.get(Student.class, 4L);
-            System.out.println(System.lineSeparator() + student);
-            System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" + System.lineSeparator());
+        System.out.println();
+        studentDao.getAllStudents().forEach(System.out::println);
+        System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" + System.lineSeparator());
 
-            System.out.println(System.lineSeparator() + "------------Add new student--------------");
-            // session.save(new Student("Alli", "king@jbs.com"));
+        System.out.println(System.lineSeparator() + "------------Delete one student--------------");
+        System.out.println("Students before delete: " + System.lineSeparator());
+        studentDao.getAllStudents().forEach(System.out::println);
 
-            students = session.createQuery("FROM Student", Student.class).getResultList();
-            System.out.println();
-            students.forEach(System.out::println);
-            System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" + System.lineSeparator());
+//        studentDao.deleteByID(8L);
 
-            System.out.println(System.lineSeparator() + "------------Update one student--------------");
-            student = session.get(Student.class, 6L);
-            System.out.println("Student with id = 6 before update: " + student);
+        System.out.println("Students after delete: " + System.lineSeparator());
+        studentDao.getAllStudents().forEach(System.out::println);
+        System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" + System.lineSeparator());
 
-            Transaction transactionUpdate = session.beginTransaction();
-            student.setName("NewName");
-            student.setEmail("somemail@test.com");
+        System.out.println(System.lineSeparator() + "------------Update one student--------------");
+        student = studentDao.getByID(2L);
+        System.out.println("Student with id = 2 before update: " + student);
 
-            session.update(student);
-            transactionUpdate.commit();
+        student.setName("NewName");
+        student.setEmail("somemail@test.com");
 
-            student = session.get(Student.class, 6L);
-            System.out.println(System.lineSeparator() +
-                    "Student with id = 6 after update: " +
-                    student);
-            System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" + System.lineSeparator());
+        studentDao.update(student);
 
-            System.out.println(System.lineSeparator() + "------------Delete one student--------------");
-            student = session.get(Student.class, 3L);
-            System.out.println("Student with id = 3 before delete: " + student);
+        System.out.println(System.lineSeparator() +
+                "Student with id = 2 after update: " + studentDao.getByID(2L));
+        System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" + System.lineSeparator());
 
-            Transaction transactionDelete = session.beginTransaction();
-            session.delete(student);
-            transactionDelete.commit();
+        System.out.println(System.lineSeparator() + "------------Get all exist students--------------");
+        studentDao.getAllStudents().forEach(System.out::println);
+        System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" + System.lineSeparator());
 
-            System.out.println("Students after delete: ");
-            students = session.createQuery("FROM Student", Student.class).getResultList();
-            System.out.println();
-            students.forEach(System.out::println);
-            System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" + System.lineSeparator());
-
-            session.close();
-        }
+        System.out.println(System.lineSeparator() + "------------Get one student--------------");
+        System.out.println(System.lineSeparator() + "Student with ID 4: " + studentDao.getByID(4L));
+        System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" + System.lineSeparator());
     }
 }

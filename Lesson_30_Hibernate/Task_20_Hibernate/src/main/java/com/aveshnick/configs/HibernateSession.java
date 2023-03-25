@@ -1,6 +1,6 @@
-package com.company.utils;
+package com.aveshnick.configs;
 
-import com.company.entitys.Student;
+import com.aveshnick.entities.Student;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

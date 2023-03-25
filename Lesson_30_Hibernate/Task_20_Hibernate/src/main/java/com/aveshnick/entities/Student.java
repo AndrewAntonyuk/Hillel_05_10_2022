@@ -1,4 +1,4 @@
-package com.company.entitys;
+package com.aveshnick.entities;
 
 import lombok.Data;
 
