@@ -1,5 +1,6 @@
-package com.av.entity;
+package com.av.repository;
 
+import com.av.entity.Product;
 import com.av.exception.NoSuchProductException;
 import org.springframework.stereotype.Component;
 

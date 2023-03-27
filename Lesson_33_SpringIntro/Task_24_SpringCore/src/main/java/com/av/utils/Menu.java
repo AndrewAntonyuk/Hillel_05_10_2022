@@ -1,7 +1,7 @@
 package com.av.utils;
 
 import com.av.entity.Cart;
-import com.av.entity.ProductRepository;
+import com.av.repository.ProductRepository;
 import com.av.exception.NoSuchProductException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
