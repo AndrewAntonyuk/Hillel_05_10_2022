@@ -13,8 +13,10 @@ import java.util.Scanner;
 @Scope(scopeName = "prototype")
 public class Menu {
     private final Scanner scanner = new Scanner(System.in);
+
     @Autowired
     private Cart cart;
+
     @Autowired
     private ProductRepository productRepository;
 

@@ -37,16 +37,10 @@ public class ProductRepository {
     }
 
     private Product findProduct(Long id) {
-        Product checkedProduct = products.stream()
+        return products.stream()
                 .filter(product -> product.getCurrentId().equals(id))
                 .findFirst()
-                .orElse(null);
-
-        if (checkedProduct == null) {
-            throw new NoSuchProductException("Product with ID "
-                    + id + " doesn't exist in repository");
-        }
-
-        return checkedProduct;
+                .orElseThrow(() -> new com.av.exception.NoSuchProductException("Product with ID "
+                        + id + " doesn't exist in repository"));
     }
 }
