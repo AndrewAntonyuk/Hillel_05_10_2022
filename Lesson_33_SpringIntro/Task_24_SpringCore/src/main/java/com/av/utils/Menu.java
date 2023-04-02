@@ -1,12 +1,14 @@
 package com.av.utils;
 
 import com.av.entity.Cart;
+import com.av.enums.MenuCommand;
 import com.av.repository.ProductRepository;
 import com.av.exception.NoSuchProductException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 @Component
@@ -27,28 +29,35 @@ public class Menu {
 
     private void readUserInput() {
         int typed = -1;
+        MenuCommand command;
 
         while (typed != 0) {
             typed = scanner.nextInt();
 
-            switch (typed) {
-                case 0 -> System.out.println("Good luck!");
-                case 1 -> {
-                    showAllProducts();
+            try {
+                command = MenuCommand.values()[typed];
+
+                switch (command) {
+                    case EXIT -> System.out.println("Good luck!");
+                    case ALLREP -> {
+                        showAllProducts();
+                    }
+                    case ALLCART -> {
+                        showAllCartProducts();
+                    }
+                    case ADD -> {
+                        addProduct();
+                    }
+                    case DELETE -> {
+                        deleteProduct();
+                    }
                 }
-                case 2 -> {
-                    showAllCartProducts();
-                }
-                case 3 -> {
-                    addProduct();
-                }
-                case 4 -> {
-                    deleteProduct();
-                }
-                default -> {
-                    System.out.println("Undefined input " + typed);
-                    showAdvice();
-                }
+
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Undefined input " + typed);
+                showAdvice();
+            } catch (RuntimeException e) {
+                throw new RuntimeException();
             }
         }
     }
@@ -102,11 +111,10 @@ public class Menu {
     }
 
     private void showAdvice() {
-        System.out.println("1 - Show all products in repository");
-        System.out.println("2 - Show all products in cart");
-        System.out.println("3 - Add product to cart");
-        System.out.println("4 - Delete product from cart");
-        System.out.println("0 - Exit");
+        Arrays.stream(MenuCommand.values())
+                .forEach(command ->
+                        System.out.println(command.ordinal() + " - " + command.getHelpText()));
+
         System.out.println("Please, enter your choice:");
         System.out.println("=================================");
     }
