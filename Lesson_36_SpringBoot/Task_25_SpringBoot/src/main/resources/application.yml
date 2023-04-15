@@ -14,3 +14,13 @@ spring:
     password: '${spring.datasource.password}'
     driver-class-name: '${spring.datasource.driver-class-name}'
     locations: 'db/migrations'
+
+logging:
+  level:
+    root: OFF
+    com.av.shop.task_25_springboot: INFO
+    org.springframework.web: INFO
+  pattern:
+    console: "%d{yyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n"
+    file: "%d{yyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n"
+  file: logs/task_log.log
