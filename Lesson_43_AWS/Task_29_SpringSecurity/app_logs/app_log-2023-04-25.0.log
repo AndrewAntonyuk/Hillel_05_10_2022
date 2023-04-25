@@ -1,0 +1,93 @@
+2023-04-25 17:38:00,075 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | Starting App using Java 19.0.2 with PID 10064 (E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes started by Admin in E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity)
+2023-04-25 17:38:00,079 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | No active profile set, falling back to 1 default profile: "default"
+2023-04-25 17:38:00,576 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-25 17:38:00,592 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-04-25 17:38:01,070 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat initialized with port(s): 8080 (http)
+2023-04-25 17:38:01,078 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Starting service [Tomcat]
+2023-04-25 17:38:01,078 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardEngine | Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-04-25 17:38:01,146 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | Initializing Spring embedded WebApplicationContext
+2023-04-25 17:38:01,146 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.web.servlet.context.ServletWebServerApplicationContext | Root WebApplicationContext: initialization completed in 1026 ms
+2023-04-25 17:38:01,233 {yyyy-MM-dd HH:mm:ss.SSS} | WARN  | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties': Could not bind properties to 'JpaProperties' : prefix=spring.jpa, ignoreInvalidFields=false, ignoreUnknownFields=true
+2023-04-25 17:38:01,236 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Stopping service [Tomcat]
+2023-04-25 17:38:01,248 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.autoconfigure.logging.ConditionEvaluationReportLogger | 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-04-25 17:38:01,262 {yyyy-MM-dd HH:mm:ss.SSS} | ERROR | o.s.boot.diagnostics.LoggingFailureAnalysisReporter | 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.jpa.properties' to java.util.Map<java.lang.String, java.lang.String>:
+
+    Property: spring.jpa.properties
+    Value: "org.hibernate.dialect.MySQL5Dialect"
+    Origin: class path resource [application-test.yml] - 11:17
+    Reason: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, java.lang.String>]
+
+Action:
+
+Update your application's configuration
+
+2023-04-25 17:40:00,026 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | Starting App using Java 19.0.2 with PID 11472 (E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes started by Admin in E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity)
+2023-04-25 17:40:00,028 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | No active profile set, falling back to 1 default profile: "default"
+2023-04-25 17:40:00,455 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-25 17:40:00,471 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2023-04-25 17:40:00,896 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat initialized with port(s): 8080 (http)
+2023-04-25 17:40:00,903 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Starting service [Tomcat]
+2023-04-25 17:40:00,903 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardEngine | Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-04-25 17:40:00,969 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | Initializing Spring embedded WebApplicationContext
+2023-04-25 17:40:00,970 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.web.servlet.context.ServletWebServerApplicationContext | Root WebApplicationContext: initialization completed in 907 ms
+2023-04-25 17:40:01,043 {yyyy-MM-dd HH:mm:ss.SSS} | WARN  | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties': Could not bind properties to 'JpaProperties' : prefix=spring.jpa, ignoreInvalidFields=false, ignoreUnknownFields=true
+2023-04-25 17:40:01,046 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Stopping service [Tomcat]
+2023-04-25 17:40:01,057 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.autoconfigure.logging.ConditionEvaluationReportLogger | 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-04-25 17:40:01,077 {yyyy-MM-dd HH:mm:ss.SSS} | ERROR | o.s.boot.diagnostics.LoggingFailureAnalysisReporter | 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.jpa.properties' to java.util.Map<java.lang.String, java.lang.String>:
+
+    Property: spring.jpa.properties
+    Value: "org.hibernate.dialect.MySQL5Dialect"
+    Origin: class path resource [application-test.yml] - 11:17
+    Reason: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, java.lang.String>]
+
+Action:
+
+Update your application's configuration
+
+2023-04-25 17:40:41,317 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | Starting App using Java 19.0.2 with PID 17708 (E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes started by Admin in E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity)
+2023-04-25 17:40:41,318 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | No active profile set, falling back to 1 default profile: "default"
+2023-04-25 17:40:41,790 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-25 17:40:41,805 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-04-25 17:40:42,249 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat initialized with port(s): 8080 (http)
+2023-04-25 17:40:42,255 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Starting service [Tomcat]
+2023-04-25 17:40:42,256 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardEngine | Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-04-25 17:40:42,323 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | Initializing Spring embedded WebApplicationContext
+2023-04-25 17:40:42,323 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.web.servlet.context.ServletWebServerApplicationContext | Root WebApplicationContext: initialization completed in 973 ms
+2023-04-25 17:40:42,460 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.jpa.internal.util.LogHelper | HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-25 17:40:42,517 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.Version | HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-25 17:40:42,741 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Starting...
+2023-04-25 17:40:42,956 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.pool.HikariPool | HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@dd737ea
+2023-04-25 17:40:42,957 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Start completed.
+2023-04-25 17:40:43,009 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | SQL dialect | HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-25 17:40:43,552 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.h.e.transaction.jta.platform.internal.JtaPlatformInitiator | HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-25 17:40:43,559 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 17:40:43,602 {yyyy-MM-dd HH:mm:ss.SSS} | WARN  | o.s.b.a.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-25 17:40:43,859 {yyyy-MM-dd HH:mm:ss.SSS} | WARN  | o.s.b.a.security.servlet.UserDetailsServiceAutoConfiguration | 
+
+Using generated security password: 555eae7e-2148-4dca-bd24-b7cbd79620b3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-04-25 17:40:43,937 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.springframework.security.web.DefaultSecurityFilterChain | Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@a11efe6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e6bbe63, org.springframework.security.web.context.SecurityContextHolderFilter@1b5d1d9, org.springframework.security.web.header.HeaderWriterFilter@95f1422, org.springframework.security.web.csrf.CsrfFilter@4700963e, org.springframework.security.web.authentication.logout.LogoutFilter@265c0752, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3b590f6a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7167d81b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@69356aca, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2d1f3639, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@790d629a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f1c7fde, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7a17ffee, org.springframework.security.web.access.ExceptionTranslationFilter@25e203e6, org.springframework.security.web.access.intercept.AuthorizationFilter@282240]
+2023-04-25 17:40:43,977 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-25 17:40:43,984 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | Started App in 3.059 seconds (process running for 3.331)

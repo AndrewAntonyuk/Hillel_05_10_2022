@@ -1,0 +1,29 @@
+spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: xxxx
+#    password: xxxx
+#    url: xxxx
+#  jpa:
+#    hibernate:
+#      ddl-auto: 'update'
+#    show-sql: 'true'
+#    properties: org.hibernate.dialect.MySQL5Dialect
+  config:
+    import: optional:classpath:application-test.yml
+
+logging:
+  file:
+    name: app_logs/app_log.log
+    max-size: 10MB
+    total-size-cap: 50MB
+    max-history: 30
+    clean-history-on-start: 'true'
+  pattern:
+    rolling-file-name: app_logs/app_log-%d{yyyy-MM-dd}.%i.log
+    console: "%d {yyyy-MM-dd HH:mm:ss.SSS} | %-5level | %logger{60} | %msg%n"
+    file: "%d {yyyy-MM-dd HH:mm:ss.SSS} | %-5level | %logger{60} | %msg%n"
+    level:
+      root: OFF
+      com.hillel.task29springsecurity: INFO
+      org.springframework.web: INFO

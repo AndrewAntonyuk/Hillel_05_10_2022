@@ -1,0 +1,273 @@
+2023-04-25 17:41:04,753 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 17:41:04,755 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown initiated...
+2023-04-25 17:41:04,761 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown completed.
+2023-04-25 17:47:59,024 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | Starting App using Java 19.0.2 with PID 10472 (E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes started by Admin in E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity)
+2023-04-25 17:47:59,026 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | No active profile set, falling back to 1 default profile: "default"
+2023-04-25 17:47:59,465 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-25 17:47:59,480 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-04-25 17:47:59,934 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat initialized with port(s): 8080 (http)
+2023-04-25 17:47:59,941 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Starting service [Tomcat]
+2023-04-25 17:47:59,941 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardEngine | Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-04-25 17:48:00,007 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | Initializing Spring embedded WebApplicationContext
+2023-04-25 17:48:00,007 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.web.servlet.context.ServletWebServerApplicationContext | Root WebApplicationContext: initialization completed in 945 ms
+2023-04-25 17:48:00,134 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.jpa.internal.util.LogHelper | HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-25 17:48:00,173 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.Version | HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-25 17:48:00,362 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Starting...
+2023-04-25 17:48:00,557 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.pool.HikariPool | HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27bb4dc5
+2023-04-25 17:48:00,558 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Start completed.
+2023-04-25 17:48:00,603 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | SQL dialect | HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-25 17:48:01,142 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.h.e.transaction.jta.platform.internal.JtaPlatformInitiator | HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-25 17:48:01,149 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 17:48:01,192 {yyyy-MM-dd HH:mm:ss.SSS} | WARN  | o.s.b.a.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-25 17:48:01,427 {yyyy-MM-dd HH:mm:ss.SSS} | WARN  | o.s.b.a.security.servlet.UserDetailsServiceAutoConfiguration | 
+
+Using generated security password: fbfde3f8-cfcd-444e-9dab-30dff7df1e81
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-04-25 17:48:01,510 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.springframework.security.web.DefaultSecurityFilterChain | Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e22d6bf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32121140, org.springframework.security.web.context.SecurityContextHolderFilter@3ab70d34, org.springframework.security.web.header.HeaderWriterFilter@435a2c7d, org.springframework.security.web.csrf.CsrfFilter@5e663ab, org.springframework.security.web.authentication.logout.LogoutFilter@1b881f1f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5c43cb12, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@42ac309, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@96c840a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3e1c5e0d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c523bdd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1791396b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c81ddab, org.springframework.security.web.access.ExceptionTranslationFilter@33f4844b, org.springframework.security.web.access.intercept.AuthorizationFilter@4d9cf71d]
+2023-04-25 17:48:01,549 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-25 17:48:01,559 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | Started App in 2.932 seconds (process running for 3.196)
+2023-04-25 18:04:49,844 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 18:04:49,846 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown initiated...
+2023-04-25 18:04:49,851 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown completed.
+2023-04-25 22:36:32,051 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | Starting App using Java 19.0.2 with PID 13064 (E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes started by Admin in E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity)
+2023-04-25 22:36:32,052 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | No active profile set, falling back to 1 default profile: "default"
+2023-04-25 22:36:32,654 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-25 22:36:32,705 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2023-04-25 22:36:33,168 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat initialized with port(s): 8080 (http)
+2023-04-25 22:36:33,176 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Starting service [Tomcat]
+2023-04-25 22:36:33,176 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardEngine | Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-04-25 22:36:33,245 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | Initializing Spring embedded WebApplicationContext
+2023-04-25 22:36:33,246 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.web.servlet.context.ServletWebServerApplicationContext | Root WebApplicationContext: initialization completed in 1158 ms
+2023-04-25 22:36:33,389 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.jpa.internal.util.LogHelper | HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-25 22:36:33,437 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.Version | HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-25 22:36:33,655 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Starting...
+2023-04-25 22:36:33,932 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.pool.HikariPool | HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@308e87a1
+2023-04-25 22:36:33,933 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Start completed.
+2023-04-25 22:36:33,974 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | SQL dialect | HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-25 22:36:34,488 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.h.e.transaction.jta.platform.internal.JtaPlatformInitiator | HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-25 22:36:34,495 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 22:36:34,504 {yyyy-MM-dd HH:mm:ss.SSS} | WARN  | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController' defined in file [E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes\com\hillel\task29springsecurity\controller\ProductController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.hillel.task29springsecurity.service.ProductService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-04-25 22:36:34,505 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 22:36:34,506 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown initiated...
+2023-04-25 22:36:34,513 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown completed.
+2023-04-25 22:36:34,515 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Stopping service [Tomcat]
+2023-04-25 22:36:34,524 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.autoconfigure.logging.ConditionEvaluationReportLogger | 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-04-25 22:36:34,541 {yyyy-MM-dd HH:mm:ss.SSS} | ERROR | o.s.boot.diagnostics.LoggingFailureAnalysisReporter | 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hillel.task29springsecurity.controller.ProductController required a bean of type 'com.hillel.task29springsecurity.service.ProductService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.hillel.task29springsecurity.service.ProductService' in your configuration.
+
+2023-04-25 22:37:47,091 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | Starting App using Java 19.0.2 with PID 8116 (E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes started by Admin in E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity)
+2023-04-25 22:37:47,092 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | No active profile set, falling back to 1 default profile: "default"
+2023-04-25 22:37:47,563 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-25 22:37:47,611 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2023-04-25 22:37:48,045 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat initialized with port(s): 8080 (http)
+2023-04-25 22:37:48,051 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Starting service [Tomcat]
+2023-04-25 22:37:48,052 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardEngine | Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-04-25 22:37:48,113 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | Initializing Spring embedded WebApplicationContext
+2023-04-25 22:37:48,113 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.web.servlet.context.ServletWebServerApplicationContext | Root WebApplicationContext: initialization completed in 989 ms
+2023-04-25 22:37:48,230 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.jpa.internal.util.LogHelper | HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-25 22:37:48,262 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.Version | HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-25 22:37:48,437 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Starting...
+2023-04-25 22:37:48,644 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.pool.HikariPool | HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19dac2d6
+2023-04-25 22:37:48,645 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Start completed.
+2023-04-25 22:37:48,684 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | SQL dialect | HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-25 22:37:49,148 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.h.e.transaction.jta.platform.internal.JtaPlatformInitiator | HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-25 22:37:49,153 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 22:37:49,396 {yyyy-MM-dd HH:mm:ss.SSS} | WARN  | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes\com\hillel\task29springsecurity\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userServiceImpl' defined in file [E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes\com\hillel\task29springsecurity\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.hillel.task29springsecurity.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.lang.Boolean com.hillel.task29springsecurity.repository.UserRepository.existByName(java.lang.String); Reason: Failed to create query for method public abstract java.lang.Boolean com.hillel.task29springsecurity.repository.UserRepository.existByName(java.lang.String); No property 'existByName' found for type 'User'
+2023-04-25 22:37:49,396 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 22:37:49,398 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown initiated...
+2023-04-25 22:37:49,403 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown completed.
+2023-04-25 22:37:49,405 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Stopping service [Tomcat]
+2023-04-25 22:37:49,412 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.autoconfigure.logging.ConditionEvaluationReportLogger | 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-04-25 22:37:49,425 {yyyy-MM-dd HH:mm:ss.SSS} | ERROR | org.springframework.boot.SpringApplication | Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes\com\hillel\task29springsecurity\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userServiceImpl' defined in file [E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes\com\hillel\task29springsecurity\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.hillel.task29springsecurity.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.lang.Boolean com.hillel.task29springsecurity.repository.UserRepository.existByName(java.lang.String); Reason: Failed to create query for method public abstract java.lang.Boolean com.hillel.task29springsecurity.repository.UserRepository.existByName(java.lang.String); No property 'existByName' found for type 'User'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.hillel.task29springsecurity.App.main(App.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes\com\hillel\task29springsecurity\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.hillel.task29springsecurity.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.lang.Boolean com.hillel.task29springsecurity.repository.UserRepository.existByName(java.lang.String); Reason: Failed to create query for method public abstract java.lang.Boolean com.hillel.task29springsecurity.repository.UserRepository.existByName(java.lang.String); No property 'existByName' found for type 'User'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.hillel.task29springsecurity.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.lang.Boolean com.hillel.task29springsecurity.repository.UserRepository.existByName(java.lang.String); Reason: Failed to create query for method public abstract java.lang.Boolean com.hillel.task29springsecurity.repository.UserRepository.existByName(java.lang.String); No property 'existByName' found for type 'User'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 33 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.lang.Boolean com.hillel.task29springsecurity.repository.UserRepository.existByName(java.lang.String); Reason: Failed to create query for method public abstract java.lang.Boolean com.hillel.task29springsecurity.repository.UserRepository.existByName(java.lang.String); No property 'existByName' found for type 'User'
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:115)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:88)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:88)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:357)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:279)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:245)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:285)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 44 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.lang.Boolean com.hillel.task29springsecurity.repository.UserRepository.existByName(java.lang.String); No property 'existByName' found for type 'User'
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:124)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:258)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:111)
+	... 56 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'existByName' found for type 'User'
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:423)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:399)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:352)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:334)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:317)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:242)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1006)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:243)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:372)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1006)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:373)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:93)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89)
+	... 60 common frames omitted
+2023-04-25 22:41:04,125 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | Starting App using Java 19.0.2 with PID 16744 (E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes started by Admin in E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity)
+2023-04-25 22:41:04,126 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | No active profile set, falling back to 1 default profile: "default"
+2023-04-25 22:41:04,575 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-25 22:41:04,620 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
+2023-04-25 22:41:05,058 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat initialized with port(s): 8080 (http)
+2023-04-25 22:41:05,065 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Starting service [Tomcat]
+2023-04-25 22:41:05,065 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardEngine | Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-04-25 22:41:05,128 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | Initializing Spring embedded WebApplicationContext
+2023-04-25 22:41:05,129 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.web.servlet.context.ServletWebServerApplicationContext | Root WebApplicationContext: initialization completed in 969 ms
+2023-04-25 22:41:05,251 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.jpa.internal.util.LogHelper | HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-25 22:41:05,282 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.Version | HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-25 22:41:05,453 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Starting...
+2023-04-25 22:41:05,668 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.pool.HikariPool | HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bb4ed71
+2023-04-25 22:41:05,670 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Start completed.
+2023-04-25 22:41:05,710 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | SQL dialect | HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-25 22:41:06,181 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.h.e.transaction.jta.platform.internal.JtaPlatformInitiator | HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-25 22:41:06,186 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 22:41:06,443 {yyyy-MM-dd HH:mm:ss.SSS} | WARN  | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes\com\hillel\task29springsecurity\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userServiceImpl' defined in file [E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes\com\hillel\task29springsecurity\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 3: No qualifying bean of type 'java.util.logging.Logger' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-04-25 22:41:06,444 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 22:41:06,445 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown initiated...
+2023-04-25 22:41:06,451 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown completed.
+2023-04-25 22:41:06,452 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Stopping service [Tomcat]
+2023-04-25 22:41:06,461 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.autoconfigure.logging.ConditionEvaluationReportLogger | 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-04-25 22:41:06,474 {yyyy-MM-dd HH:mm:ss.SSS} | ERROR | o.s.boot.diagnostics.LoggingFailureAnalysisReporter | 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 3 of constructor in com.hillel.task29springsecurity.service.impl.UserServiceImpl required a bean of type 'java.util.logging.Logger' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.util.logging.Logger' in your configuration.
+
+2023-04-25 22:42:56,938 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | Starting App using Java 19.0.2 with PID 19832 (E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity\target\classes started by Admin in E:\Own\Hillel\HomeWork\Lesson_43_AWS\Task_29_SpringSecurity)
+2023-04-25 22:42:56,939 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | No active profile set, falling back to 1 default profile: "default"
+2023-04-25 22:42:57,409 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-25 22:42:57,457 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+2023-04-25 22:42:57,875 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat initialized with port(s): 8080 (http)
+2023-04-25 22:42:57,882 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Starting service [Tomcat]
+2023-04-25 22:42:57,882 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardEngine | Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-04-25 22:42:57,944 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | Initializing Spring embedded WebApplicationContext
+2023-04-25 22:42:57,944 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.web.servlet.context.ServletWebServerApplicationContext | Root WebApplicationContext: initialization completed in 971 ms
+2023-04-25 22:42:58,064 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.jpa.internal.util.LogHelper | HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-25 22:42:58,100 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.Version | HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-25 22:42:58,278 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Starting...
+2023-04-25 22:42:58,503 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.pool.HikariPool | HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19dac2d6
+2023-04-25 22:42:58,504 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Start completed.
+2023-04-25 22:42:58,542 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | SQL dialect | HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-25 22:42:59,009 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.h.e.transaction.jta.platform.internal.JtaPlatformInitiator | HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-25 22:42:59,015 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 22:42:59,294 {yyyy-MM-dd HH:mm:ss.SSS} | WARN  | o.s.b.a.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-25 22:42:59,498 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.springframework.security.web.DefaultSecurityFilterChain | Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@28941a68, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24ce5d4c, org.springframework.security.web.context.SecurityContextHolderFilter@1f229c40, org.springframework.security.web.header.HeaderWriterFilter@2d527346, org.springframework.security.web.authentication.logout.LogoutFilter@1aebe759, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3da55998, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2e51ede1, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@24fc9aa5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@10f384a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@391b03b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e322108, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7369208e, org.springframework.security.web.access.ExceptionTranslationFilter@6fe77a97, org.springframework.security.web.access.intercept.AuthorizationFilter@63c163e1]
+2023-04-25 22:42:59,638 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-25 22:42:59,645 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.hillel.task29springsecurity.App | Started App in 3.092 seconds (process running for 3.382)
+2023-04-25 22:45:23,321 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-25 22:45:23,321 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.springframework.web.servlet.DispatcherServlet | Initializing Servlet 'dispatcherServlet'
+2023-04-25 22:45:23,322 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.springframework.web.servlet.DispatcherServlet | Completed initialization in 1 ms
+2023-04-25 23:03:42,517 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 23:03:42,518 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown initiated...
+2023-04-25 23:03:42,523 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown completed.
