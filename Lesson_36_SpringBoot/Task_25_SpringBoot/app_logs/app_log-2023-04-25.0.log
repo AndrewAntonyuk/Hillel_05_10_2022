@@ -1,0 +1,66 @@
+2023-04-25 13:27:55,316 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.av.shop.task_25_springboot.App | Starting App using Java 19.0.2 with PID 7908 (E:\Own\Hillel\HomeWork\Lesson_36_SpringBoot\Task_25_SpringBoot\target\classes started by Admin in E:\Own\Hillel\HomeWork\Lesson_36_SpringBoot\Task_25_SpringBoot)
+2023-04-25 13:27:55,317 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.av.shop.task_25_springboot.App | No active profile set, falling back to 1 default profile: "default"
+2023-04-25 13:27:55,751 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-25 13:27:55,769 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2023-04-25 13:27:56,166 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat initialized with port(s): 8080 (http)
+2023-04-25 13:27:56,173 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Starting service [Tomcat]
+2023-04-25 13:27:56,173 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardEngine | Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-25 13:27:56,236 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | Initializing Spring embedded WebApplicationContext
+2023-04-25 13:27:56,237 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.web.servlet.context.ServletWebServerApplicationContext | Root WebApplicationContext: initialization completed in 886 ms
+2023-04-25 13:27:56,356 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.jpa.internal.util.LogHelper | HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-25 13:27:56,390 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.Version | HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-25 13:27:56,558 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Starting...
+2023-04-25 13:27:56,754 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.pool.HikariPool | HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e2c6702
+2023-04-25 13:27:56,755 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Start completed.
+2023-04-25 13:27:56,791 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | SQL dialect | HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-25 13:27:57,331 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.h.e.transaction.jta.platform.internal.JtaPlatformInitiator | HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-25 13:27:57,336 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 13:27:57,408 {yyyy-MM-dd HH:mm:ss.SSS} | WARN  | o.s.b.a.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-25 13:27:57,659 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-25 13:27:57,667 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.av.shop.task_25_springboot.App | Started App in 2.769 seconds (process running for 3.029)
+2023-04-25 13:28:06,578 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 13:28:06,579 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown initiated...
+2023-04-25 13:28:06,583 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown completed.
+2023-04-25 13:28:09,981 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.av.shop.task_25_springboot.App | Starting App using Java 19.0.2 with PID 11168 (E:\Own\Hillel\HomeWork\Lesson_36_SpringBoot\Task_25_SpringBoot\target\classes started by Admin in E:\Own\Hillel\HomeWork\Lesson_36_SpringBoot\Task_25_SpringBoot)
+2023-04-25 13:28:09,983 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.av.shop.task_25_springboot.App | No active profile set, falling back to 1 default profile: "default"
+2023-04-25 13:28:10,402 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-25 13:28:10,421 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+2023-04-25 13:28:10,820 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat initialized with port(s): 8080 (http)
+2023-04-25 13:28:10,827 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Starting service [Tomcat]
+2023-04-25 13:28:10,827 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardEngine | Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-25 13:28:10,888 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | Initializing Spring embedded WebApplicationContext
+2023-04-25 13:28:10,888 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.web.servlet.context.ServletWebServerApplicationContext | Root WebApplicationContext: initialization completed in 872 ms
+2023-04-25 13:28:11,002 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.jpa.internal.util.LogHelper | HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-25 13:28:11,041 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.Version | HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-25 13:28:11,209 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Starting...
+2023-04-25 13:28:11,407 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.pool.HikariPool | HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51eb0e84
+2023-04-25 13:28:11,408 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Start completed.
+2023-04-25 13:28:11,448 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | SQL dialect | HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-25 13:28:11,996 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.h.e.transaction.jta.platform.internal.JtaPlatformInitiator | HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-25 13:28:12,001 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 13:28:12,077 {yyyy-MM-dd HH:mm:ss.SSS} | WARN  | o.s.b.a.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-25 13:28:12,323 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-25 13:28:12,331 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.av.shop.task_25_springboot.App | Started App in 2.691 seconds (process running for 2.937)
+2023-04-25 13:28:16,830 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 13:28:16,831 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown initiated...
+2023-04-25 13:28:16,837 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Shutdown completed.
+2023-04-25 13:28:20,183 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.av.shop.task_25_springboot.App | Starting App using Java 19.0.2 with PID 11996 (E:\Own\Hillel\HomeWork\Lesson_36_SpringBoot\Task_25_SpringBoot\target\classes started by Admin in E:\Own\Hillel\HomeWork\Lesson_36_SpringBoot\Task_25_SpringBoot)
+2023-04-25 13:28:20,185 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.av.shop.task_25_springboot.App | No active profile set, falling back to 1 default profile: "default"
+2023-04-25 13:28:20,596 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-25 13:28:20,612 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.data.repository.config.RepositoryConfigurationDelegate | Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2023-04-25 13:28:21,001 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat initialized with port(s): 8080 (http)
+2023-04-25 13:28:21,008 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardService | Starting service [Tomcat]
+2023-04-25 13:28:21,008 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.apache.catalina.core.StandardEngine | Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-25 13:28:21,071 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/] | Initializing Spring embedded WebApplicationContext
+2023-04-25 13:28:21,071 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.b.web.servlet.context.ServletWebServerApplicationContext | Root WebApplicationContext: initialization completed in 855 ms
+2023-04-25 13:28:21,188 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.jpa.internal.util.LogHelper | HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-25 13:28:21,219 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | org.hibernate.Version | HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-25 13:28:21,388 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Starting...
+2023-04-25 13:28:21,586 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.pool.HikariPool | HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51eb0e84
+2023-04-25 13:28:21,588 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Start completed.
+2023-04-25 13:28:21,626 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | SQL dialect | HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-25 13:28:22,168 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.h.e.transaction.jta.platform.internal.JtaPlatformInitiator | HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-25 13:28:22,174 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.s.orm.jpa.LocalContainerEntityManagerFactoryBean | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-25 13:28:22,249 {yyyy-MM-dd HH:mm:ss.SSS} | WARN  | o.s.b.a.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-25 13:28:22,484 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | o.springframework.boot.web.embedded.tomcat.TomcatWebServer | Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-25 13:28:22,491 {yyyy-MM-dd HH:mm:ss.SSS} | INFO  | com.av.shop.task_25_springboot.App | Started App in 2.651 seconds (process running for 2.896)

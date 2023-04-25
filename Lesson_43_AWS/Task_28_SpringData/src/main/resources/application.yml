@@ -1,19 +1,15 @@
 spring:
 #  datasource:
-#    url: xxxx
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:xxxx
 #    username: xxxx
 #    password: xxxx
 #  jpa:
 #    hibernate:
 #      ddl-auto: 'update'
 #    show-sql: 'true'
-#  flyway:
-#    enabled: 'false'
-#    url: '${spring.datasource.url}'
-#    user: '${spring.datasource.username}'
-#    password: '${spring.datasource.password}'
-#    driver-class-name: '${spring.datasource.driver-class-name}'
-#    locations: 'db/migrations'
+#    properties:
+#      hibernate: org.hibernate.dialect.MySQL5Dialect
   config:
     import: optional:classpath:application-test.yml
 
@@ -29,6 +25,6 @@ logging:
     file: "%d {yyyy-MM-dd HH:mm:ss.SSS} | %-5level | %logger{60} | %msg%n"
     level:
       root: OFF
-      com.av.shop.task_25_springboot: INFO
+      com.hillel.task28springdata: INFO
       org.springframework.web: INFO
     rolling-file-name: app_logs/app_log-%d{yyyy-MM-dd}.%i.log

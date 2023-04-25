@@ -1,12 +1,11 @@
-package com.av.shop.task_25_springboot.config;
+package com.hillel.task28springdata.config;
 
-import com.av.shop.task_25_springboot.App;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.slf4j.LoggerFactory;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.util.logging.Logger;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 public class Config {
