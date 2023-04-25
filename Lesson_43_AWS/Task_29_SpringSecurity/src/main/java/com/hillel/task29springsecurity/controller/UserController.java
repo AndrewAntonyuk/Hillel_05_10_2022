@@ -15,12 +15,12 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping
-    public List<UserBaseDto> getAll(){
+    public List<UserBaseDto> getAll() {
         return userService.getAll();
     }
 
     @GetMapping("/user/{id}")
-    public UserBaseDto getById(@PathVariable Long id){
+    public UserBaseDto getById(@PathVariable Long id) {
         return userService.getById(id);
     }
 

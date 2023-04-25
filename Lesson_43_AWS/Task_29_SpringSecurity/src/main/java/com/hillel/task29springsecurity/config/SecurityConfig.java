@@ -19,15 +19,15 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain getSecurityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeHttpRequests(request ->
-                request
-                        .requestMatchers("/users/user/register").permitAll()
-                        .requestMatchers("/products/get-all").permitAll()
-                        .requestMatchers("/products/product-get/**").permitAll()
-                        .requestMatchers("/ping").permitAll()
-                        .requestMatchers("/users/**").hasAnyRole("ADMIN")
-                        .requestMatchers("/products/**").hasAnyRole("ADMIN")
-                        .anyRequest()
-                        .authenticated())
+                        request
+                                .requestMatchers("/users/user/register").permitAll()
+                                .requestMatchers("/products/get-all").permitAll()
+                                .requestMatchers("/products/product-get/**").permitAll()
+                                .requestMatchers("/ping").permitAll()
+                                .requestMatchers("/users/**").hasAnyRole("ADMIN")
+                                .requestMatchers("/products/**").hasAnyRole("ADMIN")
+                                .anyRequest()
+                                .authenticated())
                 .formLogin()
                 .defaultSuccessUrl("/ping", true)
                 .and()
@@ -45,7 +45,7 @@ public class SecurityConfig {
     }
 
     @Bean
-    public DaoAuthenticationProvider getDaoAuthenticationProvider(UserServiceImpl userService){
+    public DaoAuthenticationProvider getDaoAuthenticationProvider(UserServiceImpl userService) {
         DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
         authenticationProvider.setPasswordEncoder(getPasswordEncoder());
         authenticationProvider.setUserDetailsService(userService);

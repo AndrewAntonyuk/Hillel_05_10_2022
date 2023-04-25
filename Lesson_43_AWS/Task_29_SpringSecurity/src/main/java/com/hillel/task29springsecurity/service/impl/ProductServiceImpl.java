@@ -45,11 +45,11 @@ public class ProductServiceImpl implements ProductService {
     @Transactional
     @Override
     public void deleteById(Long id) {
-          productRepository.delete(findById(id));
+        productRepository.delete(findById(id));
     }
 
     private Product findById(Long id) {
         return productRepository.findById(id)
-                .orElseThrow(()->new NoSuchProductException("Can't find product with id " + id));
+                .orElseThrow(() -> new NoSuchProductException("Can't find product with id " + id));
     }
 }
