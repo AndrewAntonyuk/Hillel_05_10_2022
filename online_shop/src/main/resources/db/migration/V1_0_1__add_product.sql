@@ -1,0 +1,1 @@
+INSERT INTO product (product_name, price, quantity) VALUES ('jin', 50, 100);

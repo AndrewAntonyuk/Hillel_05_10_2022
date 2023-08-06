@@ -1,0 +1,863 @@
+{
+	"info": {
+		"_postman_id": "94fe865d-1585-4982-a4b8-f07460ad5055",
+		"name": "OnlineShop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ProductController",
+			"item": [
+				{
+					"name": "POST_Create",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "root",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "root",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\": \"DDDD\",\r\n\"price\": \"2.5\",\r\n\"quantity\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shop/products/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"products",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT_Update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "root",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "root",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"nnnnaaa\",\r\n    \"price\": \"3.5\",\r\n    \"quantity\": 10\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shop/products/update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"products",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/shop/products/delete?id=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"products",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_getAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/shop/products/get-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"products",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_getProduct",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/shop/products/get/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"products",
+								"get",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserController",
+			"item": [
+				{
+					"name": "PUT_Update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "root",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "root",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"TNewFirst\",\r\n    \"lastName\": \"TNewLast\",\r\n    \"login\": \"TNew\",\r\n    \"password\": \"TNew\",\r\n    \"age\": 777,\r\n     \"email\": \"t.tnew@mail.org\",\r\n     \"role\": \"ROLE_USER\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shop/users/update/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"users",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_Delete",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "root",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "root",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/shop/users/delete?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"users",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_getUserById",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "root",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "root",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/shop/users/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"users",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_Create",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "root",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "root",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"firstName\": \"userF\",\r\n    \"lastName\": \"userL\",\r\n    \"login\": \"user\",\r\n    \"password\": \"user\",\r\n    \"age\": 20,\r\n     \"email\": \"test@mail.com\",\r\n     \"role\": \"ROLE_USER\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shop/users/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_Registy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"firstName\": \"adminF\",\r\n    \"lastName\": \"adminL\",\r\n    \"login\": \"admin\",\r\n    \"password\": \"admin\",\r\n    \"age\": 20,\r\n     \"email\": \"adm@mail.com\",\r\n     \"role\": \"ROLE_ADMIN\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shop/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_getAllUsers",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "root",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "root",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/shop/users/get-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"users",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_getAllUsersInfo",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "root",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "root",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/shop/users/get-all-info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"users",
+								"get-all-info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_getUserInfoById",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "root",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "root",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/shop/users/get-info/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"users",
+								"get-info",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_getUserByName",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "root",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "root",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/shop/users/get-by-name/root",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"users",
+								"get-by-name",
+								"root"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomerController",
+			"item": [
+				{
+					"name": "POST_AddToCart",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "name",
+								"value": "Cola",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "10.99",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "quantity",
+								"value": "154",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"productId\": 1,\r\n\"quantity\": 22\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shop/customer/add-to-cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shop",
+								"customer",
+								"add-to-cart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
